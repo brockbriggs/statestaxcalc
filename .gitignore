@@ -1,0 +1,12 @@
+# Secrets
+.env
+
+# Python junk
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.virtualenvs/
+
+# OS junk
+.DS_Store
