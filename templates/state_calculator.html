@@ -1,0 +1,92 @@
+<!-- templates/state_calculator.html -->
+{% extends "base.html" %}
+
+{% block title %}{{ state.name }} Income Tax Calculator (2026){% endblock %}
+
+{% block head_extra %}
+<!-- Chart.js CDN - REQUIRED for the pie chart -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+<style>
+    .calculator-hero {
+        background: linear-gradient(135deg, #0a1321 0%, #1e2937 100%);
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+    .map-bg {
+        position: absolute;
+        inset: 0;
+        background: url('https://i.imgur.com/2vK8zL9.png') center/cover no-repeat;
+        opacity: 0.12;
+        z-index: 0;
+    }
+    .left-panel, .right-panel {
+        background: #1e2937;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+    #takehome {
+        font-size: 4.5rem;
+        font-weight: 800;
+        color: #10b981;
+        line-height: 1;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="calculator-hero py-5">
+    <div class="map-bg"></div>
+    <div class="container position-relative">
+        <div class="row g-4 align-items-start">
+            <!-- Left Form Panel -->
+            <div class="col-lg-5">
+                <div class="left-panel p-5">
+                    <h2 class="fw-bold mb-1">{{ state.name }} Income Tax Calculator (2026)</h2>
+                    <p class="text-muted small">Last Updated for 2026 Tax Year Laws</p>
+
+                    <form id="taxForm" class="mt-4">
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">Filing Status</label>
+                            <select id="filing_status" class="form-select form-select-lg">
+                                <option value="single">Single</option>
+                                <option value="married" selected>Married Filing Jointly</option>
+                                <option value="hoh">Head of Household</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">Annual Gross Income</label>
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-text">$</span>
+                                <input type="number" id="income" class="form-control" value="150000" min="0">
+                            </div>
+                        </div>
+
+                        <button type="button" id="calculateBtn" class="btn btn-success btn-lg w-100 py-4">
+                            Calculate Taxes
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Right Results Panel -->
+            <div class="col-lg-7">
+                <div id="resultsContainer" class="right-panel p-5 d-none">
+                    {% include "results_partial.html" %}
+                </div>
+
+                <div id="placeholder" class="right-panel p-5 text-center">
+                    <i class="fas fa-chart-pie fa-5x text-muted mb-4"></i>
+                    <h4>Enter your income above to see results</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/calculator.js') }}"></script>
+{% endblock %}

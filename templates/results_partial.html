@@ -1,0 +1,34 @@
+<!-- templates/results_partial.html -->
+<div class="text-center">
+    <h5 class="text-light mb-2">Your Estimated Taxes</h5>
+    <div id="takehome" class="mb-4">$0</div>
+    <h6 class="fw-bold text-light">Total Tax Due</h6>
+</div>
+
+<div class="row text-center g-4 my-5">
+    <div class="col-4">
+        <div class="small text-light">Federal Tax</div>
+        <div id="federal_tax" class="fw-bold text-white">$0</div>
+    </div>
+    <div class="col-4">
+        <div class="small text-light">{{ state.name }} State Tax</div>
+        <div id="state_tax" class="fw-bold text-white">$0</div>
+    </div>
+    <div class="col-4">
+        <div class="small text-light">Local Tax</div>
+        <div id="local_tax" class="fw-bold text-white">$0</div>
+    </div>
+</div>
+
+<div class="mb-5">
+    <canvas id="taxPieChart" height="220"></canvas>
+</div>
+
+<div class="d-flex gap-3">
+    <button onclick="window.print()" class="btn btn-outline-light flex-fill py-3">
+        Download PDF Report
+    </button>
+    <a href="/" class="btn btn-success flex-fill py-3">
+        Compare States
+    </a>
+</div>

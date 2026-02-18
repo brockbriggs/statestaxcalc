@@ -1,0 +1,85 @@
+<!-- templates/index.html -->
+{% extends "base.html" %}
+
+{% block title %}StateTaxCalc - 2026 Tax Calculators{% endblock %}
+
+{% block head_extra %}
+<style>
+    .hero {
+        min-height: 85vh;
+        background: linear-gradient(135deg, #0a1321 0%, #1e2937 100%);
+        position: relative;
+        overflow: hidden;
+    }
+    .map-bg {
+        position: absolute;
+        inset: 0;
+        background: url('https://i.imgur.com/2vK8zL9.png') center/cover no-repeat; /* dark US map - green on CA & FL */
+        opacity: 0.18;
+        z-index: 0;
+    }
+    .hero-content {
+        position: relative;
+        z-index: 1;
+    }
+    .search-bar {
+        background: white;
+        border-radius: 9999px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section - Exact match to screenshot -->
+<section class="hero d-flex align-items-center">
+    <div class="map-bg"></div>
+    <div class="container hero-content">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-10">
+                <h1 class="display-3 fw-bold mb-4" style="letter-spacing: -2px; line-height: 1.1;">
+                    TAX SEASON,<br>SIMPLIFIED
+                </h1>
+                <p class="lead text-light mb-5 fs-4 col-lg-8 mx-auto">
+                    Smart calculators tailored to all 50 states.<br>
+                    Precise, private, and always up-to-date.
+                </p>
+
+                <!-- Search Bar + Button -->
+                <div class="d-flex flex-column flex-md-row gap-3 justify-content-center align-items-center">
+                    <div class="search-bar d-flex align-items-center px-4 py-3 w-100" style="max-width: 420px;">
+                        <i class="fas fa-search text-muted me-3"></i>
+                        <input type="text" class="form-control border-0 shadow-none fs-5" 
+                               placeholder="Enter your zip code to start" style="background: transparent;">
+                    </div>
+                    <a href="/" class="btn btn-success btn-lg px-5 py-3 fs-5 fw-semibold">
+                        COMPARE STATES
+                    </a>
+                </div>
+
+                <div class="mt-5 text-muted small">
+                    Trusted by thousands of movers, retirees & high earners in 2026
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured States / Quick Links (below the fold, matching clean style) -->
+<!-- Replace only the Featured States section in index.html -->
+<div class="container py-5">
+    <h2 class="text-center mb-5 text-white fw-bold">Instant 2026 Tax Calculators by State</h2>
+    <div class="row g-4">
+        {% for state in states if state.competitiveness_rank <= 10 %}
+        <div class="col-md-4 col-sm-6">
+            <a href="/tax-calculator/{{ state.slug }}" class="text-decoration-none">
+                <div class="card h-100 text-center p-4 hover-lift bg-dark text-white">
+                    <h5 class="fw-bold">{{ state.name }}</h5>
+                    <span class="badge bg-success fs-6 mt-2">{{ state.top_rate }}</span>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

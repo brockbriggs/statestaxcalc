@@ -1,0 +1,87 @@
+<!-- templates/blog_index.html -->
+{% extends "base.html" %}
+
+{% block title %}State Tax Blog - 2026 Insights & Guides{% endblock %}
+
+{% block head_extra %}
+<style>
+    .blog-hero {
+        background: linear-gradient(135deg, #0a1321 0%, #1e2937 100%);
+        min-height: 60vh;
+        position: relative;
+        overflow: hidden;
+    }
+    .map-bg {
+        position: absolute;
+        inset: 0;
+        background: url('https://i.imgur.com/2vK8zL9.png') center/cover no-repeat;
+        opacity: 0.15;
+        z-index: 0;
+    }
+    .blog-card {
+        background: #1e2937;
+        border: none;
+        border-radius: 20px;
+        transition: all 0.4s ease;
+    }
+    .blog-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    }
+    .card-icon {
+        width: 48px;
+        height: 48px;
+        background: #10b981;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.4rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="blog-hero d-flex align-items-center">
+    <div class="map-bg"></div>
+    <div class="container position-relative">
+        <div class="text-center">
+            <h1 class="display-4 fw-bold mb-3" style="letter-spacing: -1.5px;">
+                State Tax Blog
+            </h1>
+            <p class="lead text-light col-lg-8 mx-auto">
+                Insights, Updates, and Guides to Navigate Your Financial Journey in 2026
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Grid -->
+<div class="container py-5">
+    <div class="row g-4">
+        {% for post in blogs[:8] %}  <!-- Shows first 8 posts like your screenshot -->
+        <div class="col-lg-3 col-md-6">
+            <div class="blog-card h-100 p-4">
+                <div class="card-icon mb-4">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h5 class="fw-bold line-clamp-2 mb-3">{{ post.title }}</h5>
+                <p class="text-muted small mb-4">{{ post.date }}</p>
+                <a href="/blog/{{ post.slug }}" class="btn btn-success btn-sm w-100">
+                    Read More
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- View All Button -->
+    <div class="text-center mt-5">
+        <a href="/blog" class="btn btn-outline-light px-5 py-3">
+            View All Articles →
+        </a>
+    </div>
+</div>
+{% endblock %}

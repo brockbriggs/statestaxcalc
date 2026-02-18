@@ -1,0 +1,129 @@
+<!-- templates/blog_post.html -->
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }}{% endblock %}
+{% block meta_description %}{{ post.meta_description }}{% endblock %}
+
+{% block head_extra %}
+<style>
+    .blog-hero {
+        background: linear-gradient(135deg, #0a1321 0%, #1e2937 100%);
+        padding: 80px 0 60px;
+    }
+    .blog-content {
+        font-size: 1.15rem;
+        line-height: 1.85;
+        color: #e2e8f0;
+    }
+    .blog-content h2, .blog-content h3 {
+        color: white;
+        margin-top: 2.5rem;
+    }
+    .sidebar {
+        position: sticky;
+        top: 100px;
+    }
+    .toc a {
+        color: #94a3b8;
+        text-decoration: none;
+    }
+    .toc a:hover {
+        color: #10b981;
+    }
+    .related-card {
+        background: #1e2937;
+        border-radius: 16px;
+        transition: all 0.3s ease;
+    }
+    .related-card:hover {
+        transform: translateY(-6px);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="blog-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3" style="letter-spacing: -1.5px;">{{ post.title }}</h1>
+                <p class="text-muted fs-5">
+                    By StateTaxCalc Team • {{ post.date }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row">
+        <!-- Main Content -->
+        <div class="col-lg-8">
+            <div class="blog-content">
+                {{ content | safe }}
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="mt-5 pt-5 border-top text-center">
+                <h4 class="mb-3">Ready to see your exact 2026 numbers?</h4>
+                <a href="/" class="btn btn-success btn-lg px-5 py-3">
+                    Try Our Free State Tax Calculators →
+                </a>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+            <div class="sidebar">
+                <!-- Table of Contents -->
+                <div class="card p-4 mb-4">
+                    <h6 class="fw-bold mb-3">Table of Contents</h6>
+                    <div class="toc small">
+                        <a href="#" class="d-block py-1">Key Federal Updates</a>
+                        <a href="#" class="d-block py-1">State-Specific Impacts</a>
+                        <a href="#" class="d-block py-1">What This Means for You</a>
+                    </div>
+                </div>
+
+                <!-- Related Posts -->
+                <div class="card p-4 mb-4">
+                    <h6 class="fw-bold mb-3">Related Posts</h6>
+                    {% for related in blogs[:3] if related.slug != post.slug %}
+                    <div class="related-card p-3 mb-3">
+                        <a href="/blog/{{ related.slug }}" class="text-decoration-none text-light">
+                            <strong>{{ related.title }}</strong>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="d-grid gap-3">
+                    <button onclick="window.print()" class="btn btn-success py-3">
+                        <i class="fas fa-download me-2"></i> Download PDF Report
+                    </button>
+                    <button onclick="shareArticle()" class="btn btn-outline-light py-3">
+                        <i class="fas fa-share-alt me-2"></i> Share Article
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function shareArticle() {
+    if (navigator.share) {
+        navigator.share({
+            title: "{{ post.title }}",
+            url: window.location.href
+        });
+    } else {
+        navigator.clipboard.writeText(window.location.href);
+        alert("Link copied to clipboard!");
+    }
+}
+</script>
+{% endblock %}

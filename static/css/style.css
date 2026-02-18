@@ -1,0 +1,104 @@
+/* static/css/style.css - Exact match to your 4 screenshots */
+
+:root {
+    --bg: #0a1321;
+    --card: #1e2937;
+    --text: #e2e8f0;
+    --green: #10b981;
+    --accent: #22d3ee;
+}
+
+body {
+    background: linear-gradient(135deg, #0a1321 0%, #1e2937 100%);
+    color: var(--text);
+    font-family: 'Inter', system_ui, sans-serif;
+    min-height: 100vh;
+}
+
+/* Navbar - exact match */
+.navbar {
+    background: rgba(10, 19, 33, 0.97) !important;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.navbar-brand {
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    font-size: 1.65rem;
+}
+
+/* Cards */
+.card {
+    background: var(--card);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    overflow: hidden;
+}
+
+/* Green buttons */
+.btn-success {
+    background: var(--green);
+    border: none;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 9999px;
+    padding: 14px 32px;
+}
+
+.btn-success:hover {
+    background: #059669;
+    transform: translateY(-3px);
+}
+
+/* Big green result number */
+#takehome {
+    font-size: 4.2rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--green);
+}
+
+/* Map background (subtle like your screenshots) */
+.map-bg {
+    position: absolute;
+    inset: 0;
+    background: url('https://i.imgur.com/2vK8zL9.png') center/cover no-repeat; /* dark US map with green states */
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Blog & Homepage cards */
+.blog-card, .feature-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.blog-card:hover, .feature-card:hover {
+    transform: translateY(-16px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+/* Force visible text on dark backgrounds - site-wide fix */
+.card,
+.right-panel,
+.left-panel {
+    color: #e2e8f0 !important;
+}
+
+.text-muted {
+    color: #94a3b8 !important;
+}
+
+small, .small {
+    color: #94a3b8 !important;
+}
+
+/* Chart.js legend & labels */
+#taxPieChart {
+    filter: brightness(1.1);
+}
+
+.chartjs-render-monitor {
+    color: #e2e8f0 !important;
+}
