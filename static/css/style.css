@@ -102,3 +102,34 @@ small, .small {
 .chartjs-render-monitor {
     color: #e2e8f0 !important;
 }
+
+/* Table styling for Blog Content */
+.blog-content table {
+    width: 100%;
+    margin-bottom: 2rem;
+    color: var(--text);
+    border-collapse: collapse;
+    background: rgba(30, 41, 55, 0.5); /* Semi-transparent card color */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.blog-content th, 
+.blog-content td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle grid lines */
+}
+
+.blog-content th {
+    background-color: rgba(16, 185, 129, 0.1); /* Subtle green for headers */
+    color: var(--green);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+.blog-content tr:hover {
+    background-color: rgba(255, 255, 255, 0.03); /* Hover effect for rows */
+}
