@@ -21,10 +21,12 @@ document.addEventListener('DOMContentLoaded', function () {
 async function calculateTaxes() {
     const incomeInput = document.getElementById('income');
     const filingSelect = document.getElementById('filing_status');
+    const is1099Check = document.getElementById('is_1099');
     const calculateBtn = document.getElementById('calculateBtn');
 
     const income = parseFloat(incomeInput.value) || 0;
     const filingStatus = filingSelect.value;
+    const is1099 = is1099Check ? is1099Check.checked : false;
     const stateSlug = window.location.pathname.split('/').pop();
 
     if (income <= 0) {
@@ -43,7 +45,8 @@ async function calculateTaxes() {
             body: JSON.stringify({
                 income: income,
                 filing_status: filingStatus,
-                state_slug: stateSlug
+                state_slug: stateSlug,
+                is_1099: is1099
             })
         });
 

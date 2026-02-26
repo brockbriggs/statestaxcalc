@@ -15,11 +15,11 @@
         overflow: hidden;
     }
     .map-bg {
-        position: absolute;
-        inset: 0;
-        background: url('https://i.imgur.com/2vK8zL9.png') center/cover no-repeat;
-        opacity: 0.12;
-        z-index: 0;
+    position: absolute;
+    inset: 0;
+    background: url("{{ url_for('static', filename='us-map.png') }}") center/cover no-repeat;
+    opacity: 0.2;
+    z-index: 0;
     }
     .left-panel, .right-panel {
         background: #1e2937;
@@ -48,8 +48,8 @@
 
                     <form id="taxForm" class="mt-4">
                         <div class="mb-4">
-                            <label class="form-label fw-semibold">Filing Status</label>
-                            <select id="filing_status" class="form-select form-select-lg">
+                            <label class="form-label fw-semibold text-light">Filing Status</label>
+                            <select id="filing_status" class="form-select form-select-lg bg-dark text-white border-secondary">
                                 <option value="single">Single</option>
                                 <option value="married" selected>Married Filing Jointly</option>
                                 <option value="hoh">Head of Household</option>
@@ -57,15 +57,23 @@
                         </div>
 
                         <div class="mb-4">
-                            <label class="form-label fw-semibold">Annual Gross Income</label>
+                            <label class="form-label fw-semibold text-light">Annual Gross Income</label>
                             <div class="input-group input-group-lg">
-                                <span class="input-group-text">$</span>
-                                <input type="number" id="income" class="form-control" value="150000" min="0">
+                                <span class="input-group-text bg-dark text-success border-secondary">$</span>
+                                <input type="number" id="income" class="form-control bg-dark text-white border-secondary" value="150000" min="0">
                             </div>
                         </div>
 
-                        <button type="button" id="calculateBtn" class="btn btn-success btn-lg w-100 py-4">
-                            Calculate Taxes
+                        <div class="form-check form-switch mb-4">
+                            <input class="form-check-input" type="checkbox" id="is_1099">
+                            <label class="form-check-label fw-semibold text-light" for="is_1099">
+                                Self-Employed (1099 Mode)
+                            </label>
+                            <div class="text-muted small">Adds 15.3% Federal Self-Employment Tax</div>
+                        </div>
+
+                        <button type="button" id="calculateBtn" class="btn btn-success btn-lg w-100 py-4 fw-bold">
+                            Calculate 2026 Taxes
                         </button>
                     </form>
                 </div>

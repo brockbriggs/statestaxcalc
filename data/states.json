@@ -1,631 +1,631 @@
 {
   "states": [
-    {
-      "name": "Alabama",
-      "slug": "alabama",
-      "has_income_tax": true,
-      "top_rate": "5%",
-      "competitiveness_rank": 37,
-      "description": "Alabama uses a progressive income tax system with three brackets and a top marginal rate of 5%. It offers standard deductions and personal exemptions, plus some local income taxes in certain areas. Great for families and retirees.",
-      "brackets": {
-        "single": [[0, 500, 0.02], [500, 3000, 0.04], [3000, 999999999, 0.05]],
-        "married": [[0, 1000, 0.02], [1000, 6000, 0.04], [6000, 999999999, 0.05]],
-        "hoh": [[0, 500, 0.02], [500, 3000, 0.04], [3000, 999999999, 0.05]]
-      }
-    },
-    {
-      "name": "Alaska",
-      "slug": "alaska",
-      "has_income_tax": false,
-      "top_rate": "0%",
-      "competitiveness_rank": 4,
-      "description": "Alaska has no state income tax, making it one of the most tax-friendly states. Revenue comes from oil and natural resources. Perfect for high earners and retirees.",
-      "brackets": {}
-    },
-    {
-      "name": "Arizona",
-      "slug": "arizona",
-      "has_income_tax": true,
-      "top_rate": "2.5%",
-      "competitiveness_rank": 14,
-      "description": "Arizona has a flat 2.5% income tax rate — one of the lowest in the nation. Highly competitive for businesses and individuals moving from high-tax states.",
-      "brackets": {
-        "single": [[0, 999999999, 0.025]],
-        "married": [[0, 999999999, 0.025]],
-        "hoh": [[0, 999999999, 0.025]]
-      }
-    },
-    {
-      "name": "Arkansas",
-      "slug": "arkansas",
-      "has_income_tax": true,
-      "top_rate": "3.9%",
-      "competitiveness_rank": 34,
-      "description": "Arkansas has a low top rate of 3.9% with only two brackets for most filers. Very competitive for middle-income families.",
-      "brackets": {
-        "single": [[0, 4500, 0.02], [4500, 999999999, 0.039]],
-        "married": [[0, 4500, 0.02], [4500, 999999999, 0.039]],
-        "hoh": [[0, 4500, 0.02], [4500, 999999999, 0.039]]
-      }
-    },
-    {
-      "name": "California",
-      "slug": "california",
-      "has_income_tax": true,
-      "top_rate": "13.3%",
-      "competitiveness_rank": 48,
-      "description": "California has the highest top marginal income tax rate in the U.S. at 13.3% (plus 1% mental health surcharge over $1M). Progressive with 10+ brackets. High earners often compare it to no-tax states.",
-      "brackets": {
-        "single": [[0, 10756, 0.01], [10756, 25499, 0.02], [25499, 40245, 0.04], [40245, 55866, 0.06], [55866, 70606, 0.093], [70606, 360659, 0.103], [360659, 432787, 0.113], [432787, 721314, 0.123], [721314, 1000000, 0.133], [1000000, 999999999, 0.143]],
-        "married": [[0, 21512, 0.01], [21512, 50998, 0.02], [50998, 80490, 0.04], [80490, 111732, 0.06], [111732, 141732, 0.093], [141732, 721318, 0.103], [721318, 865574, 0.113], [865574, 1000000, 0.123], [1000000, 1442628, 0.133], [1442628, 999999999, 0.143]],
-        "hoh": [[0, 10756, 0.01], [10756, 25499, 0.02], [25499, 40245, 0.04], [40245, 55866, 0.06], [55866, 70606, 0.093], [70606, 360659, 0.103], [360659, 432787, 0.113], [432787, 721314, 0.123], [721314, 1000000, 0.133], [1000000, 999999999, 0.143]]
-      }
-    },
-    {
-      "name": "Colorado",
-      "slug": "colorado",
-      "has_income_tax": true,
-      "top_rate": "4.4%",
-      "competitiveness_rank": 33,
-      "description": "Colorado has a flat 4.4% income tax rate. Very business-friendly with strong growth in tech and outdoor industries.",
-      "brackets": {
-        "single": [[0, 999999999, 0.044]],
-        "married": [[0, 999999999, 0.044]],
-        "hoh": [[0, 999999999, 0.044]]
-      }
-    },
-    {
-      "name": "Connecticut",
-      "slug": "connecticut",
-      "has_income_tax": true,
-      "top_rate": "6.99%",
-      "competitiveness_rank": 47,
-      "description": "Connecticut has a progressive tax with 7 brackets and a top rate of 6.99%. High earners face recapture provisions.",
-      "brackets": {
-        "single": [[0, 10000, 0.02], [10000, 50000, 0.045], [50000, 100000, 0.055], [100000, 200000, 0.06], [200000, 250000, 0.065], [250000, 500000, 0.069], [500000, 999999999, 0.0699]],
-        "married": [[0, 20000, 0.02], [20000, 100000, 0.045], [100000, 200000, 0.055], [200000, 400000, 0.06], [400000, 500000, 0.065], [500000, 1000000, 0.069], [1000000, 999999999, 0.0699]],
-        "hoh": [[0, 10000, 0.02], [10000, 50000, 0.045], [50000, 100000, 0.055], [100000, 200000, 0.06], [200000, 250000, 0.065], [250000, 500000, 0.069], [500000, 999999999, 0.0699]]
-      }
-    },
-    {
-      "name": "Delaware",
-      "slug": "delaware",
-      "has_income_tax": true,
-      "top_rate": "6.6%",
-      "competitiveness_rank": 24,
-      "description": "Delaware has a graduated tax with 6 brackets up to 6.6%. Known for corporate friendliness but moderate individual taxes.",
-      "brackets": {
-        "single": [[2000, 5000, 0.022], [5000, 10000, 0.039], [10000, 20000, 0.048], [20000, 25000, 0.052], [25000, 60000, 0.055], [60000, 999999999, 0.066]],
-        "married": [[2000, 5000, 0.022], [5000, 10000, 0.039], [10000, 20000, 0.048], [20000, 25000, 0.052], [25000, 60000, 0.055], [60000, 999999999, 0.066]],
-        "hoh": [[2000, 5000, 0.022], [5000, 10000, 0.039], [10000, 20000, 0.048], [20000, 25000, 0.052], [25000, 60000, 0.055], [60000, 999999999, 0.066]]
-      }
-    },
-    {
-      "name": "District of Columbia",
-      "slug": "district-of-columbia",
-      "has_income_tax": true,
-      "top_rate": "10.75%",
-      "competitiveness_rank": 48,
-      "description": "DC has one of the highest top rates at 10.75% with 7 brackets. Progressive and high for high earners.",
-      "brackets": {
-        "single": [[0, 10000, 0.04], [10000, 40000, 0.06], [40000, 60000, 0.065], [60000, 250000, 0.085], [250000, 500000, 0.0925], [500000, 1000000, 0.0975], [1000000, 999999999, 0.1075]],
-        "married": [[0, 10000, 0.04], [10000, 40000, 0.06], [40000, 60000, 0.065], [60000, 250000, 0.085], [250000, 500000, 0.0925], [500000, 1000000, 0.0975], [1000000, 999999999, 0.1075]],
-        "hoh": [[0, 10000, 0.04], [10000, 40000, 0.06], [40000, 60000, 0.065], [60000, 250000, 0.085], [250000, 500000, 0.0925], [500000, 1000000, 0.0975], [1000000, 999999999, 0.1075]]
-      }
-    },
-    {
-      "name": "Florida",
-      "slug": "florida",
-      "has_income_tax": false,
-      "top_rate": "0%",
-      "competitiveness_rank": 5,
-      "description": "Florida has no state income tax. Extremely popular for retirees, high earners, and businesses relocating from high-tax states.",
-      "brackets": {}
-    },
-    {
-      "name": "Georgia",
-      "slug": "georgia",
-      "has_income_tax": true,
-      "top_rate": "5.39%",
-      "competitiveness_rank": 18,
-      "description": "Georgia has a flat income tax rate of 5.39% (phasing down further in coming years). Very competitive for families and businesses.",
-      "brackets": {
-        "single": [[0, 999999999, 0.0539]],
-        "married": [[0, 999999999, 0.0539]],
-        "hoh": [[0, 999999999, 0.0539]]
-      }
-    },
-    {
-      "name": "Hawaii",
-      "slug": "hawaii",
-      "has_income_tax": true,
-      "top_rate": "11%",
-      "competitiveness_rank": 41,
-      "description": "Hawaii has 12 brackets with a top rate of 11% — one of the highest. Beautiful state but expensive tax-wise for high earners.",
-      "brackets": {
-        "single": [[0, 9600, 0.014], [9600, 14400, 0.032], [14400, 19200, 0.055], [19200, 24000, 0.064], [24000, 36000, 0.068], [36000, 48000, 0.072], [48000, 125000, 0.076], [125000, 175000, 0.079], [175000, 225000, 0.0825], [225000, 275000, 0.09], [275000, 325000, 0.1], [325000, 999999999, 0.11]],
-        "married": [[0, 19200, 0.014], [19200, 28800, 0.032], [28800, 38400, 0.055], [38400, 48000, 0.064], [48000, 72000, 0.068], [72000, 96000, 0.072], [96000, 250000, 0.076], [250000, 350000, 0.079], [350000, 450000, 0.0825], [450000, 550000, 0.09], [550000, 650000, 0.1], [650000, 999999999, 0.11]],
-        "hoh": [[0, 9600, 0.014], [9600, 14400, 0.032], [14400, 19200, 0.055], [19200, 24000, 0.064], [24000, 36000, 0.068], [36000, 48000, 0.072], [48000, 125000, 0.076], [125000, 175000, 0.079], [175000, 225000, 0.0825], [225000, 275000, 0.09], [275000, 325000, 0.1], [325000, 999999999, 0.11]]
-      }
-    },
-    {
-      "name": "Idaho",
-      "slug": "idaho",
-      "has_income_tax": true,
-      "top_rate": "5.3%",
-      "competitiveness_rank": 9,
-      "description": "Idaho has a flat 5.3% income tax (recently reduced). One of the fastest-improving states in tax competitiveness.",
-      "brackets": {
-        "single": [[0, 999999999, 0.053]],
-        "married": [[0, 999999999, 0.053]],
-        "hoh": [[0, 999999999, 0.053]]
-      }
-    },
-    {
-      "name": "Illinois",
-      "slug": "illinois",
-      "has_income_tax": true,
-      "top_rate": "4.95%",
-      "competitiveness_rank": 38,
-      "description": "Illinois has a flat 4.95% income tax. High property taxes offset some benefits.",
-      "brackets": {
-        "single": [[0, 999999999, 0.0495]],
-        "married": [[0, 999999999, 0.0495]],
-        "hoh": [[0, 999999999, 0.0495]]
-      }
-    },
-    {
-      "name": "Indiana",
-      "slug": "indiana",
-      "has_income_tax": true,
-      "top_rate": "3%",
-      "competitiveness_rank": 10,
-      "description": "Indiana has a flat 3% income tax (phasing lower). Extremely competitive and business-friendly.",
-      "brackets": {
-        "single": [[0, 999999999, 0.03]],
-        "married": [[0, 999999999, 0.03]],
-        "hoh": [[0, 999999999, 0.03]]
-      }
-    },
-    {
-      "name": "Iowa",
-      "slug": "iowa",
-      "has_income_tax": true,
-      "top_rate": "3.8%",
-      "competitiveness_rank": 17,
-      "description": "Iowa has a flat 3.8% income tax after recent reforms. Very attractive for Midwest movers.",
-      "brackets": {
-        "single": [[0, 999999999, 0.038]],
-        "married": [[0, 999999999, 0.038]],
-        "hoh": [[0, 999999999, 0.038]]
-      }
-    },
-    {
-      "name": "Kansas",
-      "slug": "kansas",
-      "has_income_tax": true,
-      "top_rate": "5.58%",
-      "competitiveness_rank": 23,
-      "description": "Kansas has two brackets with a top rate of 5.58%.",
-      "brackets": {
-        "single": [[0, 23000, 0.052], [23000, 999999999, 0.0558]],
-        "married": [[0, 46000, 0.052], [46000, 999999999, 0.0558]],
-        "hoh": [[0, 23000, 0.052], [23000, 999999999, 0.0558]]
-      }
-    },
-    {
-      "name": "Kentucky",
-      "slug": "kentucky",
-      "has_income_tax": true,
-      "top_rate": "4%",
-      "competitiveness_rank": 25,
-      "description": "Kentucky has a flat 4% income tax (recently reduced from higher). Good for families.",
-      "brackets": {
-        "single": [[0, 999999999, 0.04]],
-        "married": [[0, 999999999, 0.04]],
-        "hoh": [[0, 999999999, 0.04]]
-      }
-    },
-    {
-      "name": "Louisiana",
-      "slug": "louisiana",
-      "has_income_tax": true,
-      "top_rate": "3%",
-      "competitiveness_rank": 31,
-      "description": "Louisiana has a flat 3% income tax. Very low rate makes it attractive.",
-      "brackets": {
-        "single": [[0, 999999999, 0.03]],
-        "married": [[0, 999999999, 0.03]],
-        "hoh": [[0, 999999999, 0.03]]
-      }
-    },
-    {
-      "name": "Maine",
-      "slug": "maine",
-      "has_income_tax": true,
-      "top_rate": "7.15%",
-      "competitiveness_rank": 26,
-      "description": "Maine has three brackets up to 7.15%.",
-      "brackets": {
-        "single": [[0, 26800, 0.058], [26800, 63450, 0.0675], [63450, 999999999, 0.0715]],
-        "married": [[0, 53600, 0.058], [53600, 126900, 0.0675], [126900, 999999999, 0.0715]],
-        "hoh": [[0, 26800, 0.058], [26800, 63450, 0.0675], [63450, 999999999, 0.0715]]
-      }
-    },
-    {
-      "name": "Maryland",
-      "slug": "maryland",
-      "has_income_tax": true,
-      "top_rate": "5.75%",
-      "competitiveness_rank": 46,
-      "description": "Maryland has 8 brackets up to 5.75% plus local taxes. High overall burden.",
-      "brackets": {
-        "single": [[0, 1000, 0.02], [1000, 2000, 0.03], [2000, 3000, 0.04], [3000, 100000, 0.0475], [100000, 125000, 0.05], [125000, 150000, 0.0525], [150000, 250000, 0.055], [250000, 999999999, 0.0575]],
-        "married": [[0, 1000, 0.02], [1000, 2000, 0.03], [2000, 3000, 0.04], [3000, 150000, 0.0475], [150000, 175000, 0.05], [175000, 225000, 0.0525], [225000, 300000, 0.055], [300000, 999999999, 0.0575]],
-        "hoh": [[0, 1000, 0.02], [1000, 2000, 0.03], [2000, 3000, 0.04], [3000, 100000, 0.0475], [100000, 125000, 0.05], [125000, 150000, 0.0525], [150000, 250000, 0.055], [250000, 999999999, 0.0575]]
-      }
-    },
-    {
-      "name": "Massachusetts",
-      "slug": "massachusetts",
-      "has_income_tax": true,
-      "top_rate": "9%",
-      "competitiveness_rank": 43,
-      "description": "Massachusetts has a 5% flat rate plus 4% surcharge on income over ~$1M (effective top 9%).",
-      "brackets": {
-        "single": [[0, 1083150, 0.05], [1083150, 999999999, 0.09]],
-        "married": [[0, 1083150, 0.05], [1083150, 999999999, 0.09]],
-        "hoh": [[0, 1083150, 0.05], [1083150, 999999999, 0.09]]
-      }
-    },
-    {
-      "name": "Michigan",
-      "slug": "michigan",
-      "has_income_tax": true,
-      "top_rate": "4.25%",
-      "competitiveness_rank": 16,
-      "description": "Michigan has a flat 4.25% income tax. Solid choice for Midwest relocation.",
-      "brackets": {
-        "single": [[0, 999999999, 0.0425]],
-        "married": [[0, 999999999, 0.0425]],
-        "hoh": [[0, 999999999, 0.0425]]
-      }
-    },
-    {
-      "name": "Minnesota",
-      "slug": "minnesota",
-      "has_income_tax": true,
-      "top_rate": "9.85%",
-      "competitiveness_rank": 44,
-      "description": "Minnesota has high progressive rates up to 9.85%. One of the higher-tax states.",
-      "brackets": {
-        "single": [[0, 30070, 0.0535], [30070, 98390, 0.068], [98390, 183040, 0.0785], [183040, 999999999, 0.0985]],
-        "married": [[0, 44720, 0.0535], [44720, 178730, 0.068], [178730, 332700, 0.0785], [332700, 999999999, 0.0985]],
-        "hoh": [[0, 30070, 0.0535], [30070, 98390, 0.068], [98390, 183040, 0.0785], [183040, 999999999, 0.0985]]
-      }
-    },
-    {
-      "name": "Mississippi",
-      "slug": "mississippi",
-      "has_income_tax": true,
-      "top_rate": "4%",
-      "competitiveness_rank": 27,
-      "description": "Mississippi has a flat 4% income tax (recently reduced). Very low-tax South state.",
-      "brackets": {
-        "single": [[0, 999999999, 0.04]],
-        "married": [[0, 999999999, 0.04]],
-        "hoh": [[0, 999999999, 0.04]]
-      }
-    },
-    {
-      "name": "Missouri",
-      "slug": "missouri",
-      "has_income_tax": true,
-      "top_rate": "4.95%",
-      "competitiveness_rank": 12,
-      "description": "Missouri has a flat 4.95% income tax after reforms. Highly competitive.",
-      "brackets": {
-        "single": [[0, 999999999, 0.0495]],
-        "married": [[0, 999999999, 0.0495]],
-        "hoh": [[0, 999999999, 0.0495]]
-      }
-    },
-    {
-      "name": "Montana",
-      "slug": "montana",
-      "has_income_tax": true,
-      "top_rate": "6.75%",
-      "competitiveness_rank": 6,
-      "description": "Montana has graduated rates up to 6.75%. Beautiful state with improving tax climate.",
-      "brackets": {
-        "single": [[0, 3600, 0.01], [3600, 7200, 0.02], [7200, 10800, 0.03], [10800, 14400, 0.04], [14400, 18000, 0.05], [18000, 999999999, 0.0675]],
-        "married": [[0, 7200, 0.01], [7200, 14400, 0.02], [14400, 21600, 0.03], [21600, 28800, 0.04], [28800, 36000, 0.05], [36000, 999999999, 0.0675]],
-        "hoh": [[0, 3600, 0.01], [3600, 7200, 0.02], [7200, 10800, 0.03], [10800, 14400, 0.04], [14400, 18000, 0.05], [18000, 999999999, 0.0675]]
-      }
-    },
-    {
-      "name": "Nebraska",
-      "slug": "nebraska",
-      "has_income_tax": true,
-      "top_rate": "4.55%",
-      "competitiveness_rank": 22,
-      "description": "Nebraska is reducing its top rate to 4.55% in 2026. Progressive but improving.",
-      "brackets": {
-        "single": [[0, 3700, 0.023], [3700, 22100, 0.0351], [22100, 35550, 0.0463], [35550, 999999999, 0.0455]],
-        "married": [[0, 7400, 0.023], [7400, 44200, 0.0351], [44200, 71100, 0.0463], [71100, 999999999, 0.0455]],
-        "hoh": [[0, 3700, 0.023], [3700, 22100, 0.0351], [22100, 35550, 0.0463], [35550, 999999999, 0.0455]]
-      }
-    },
-    {
-      "name": "Nevada",
-      "slug": "nevada",
-      "has_income_tax": false,
-      "top_rate": "0%",
-      "competitiveness_rank": 20,
-      "description": "Nevada has no state income tax. Famous for gaming revenue instead.",
-      "brackets": {}
-    },
-    {
-      "name": "New Hampshire",
-      "slug": "new-hampshire",
-      "has_income_tax": false,
-      "top_rate": "0%",
-      "competitiveness_rank": 3,
-      "description": "New Hampshire has no broad income tax (only interest & dividends, being phased out). One of the best tax climates in America.",
-      "brackets": {}
-    },
-    {
-      "name": "New Jersey",
-      "slug": "new-jersey",
-      "has_income_tax": true,
-      "top_rate": "10.75%",
-      "competitiveness_rank": 49,
-      "description": "New Jersey has some of the highest rates in the country up to 10.75%.",
-      "brackets": {
-        "single": [[0, 20000, 0.015], [20000, 35000, 0.019], [35000, 40000, 0.035], [40000, 75000, 0.05525], [75000, 500000, 0.0637], [500000, 1000000, 0.0897], [1000000, 999999999, 0.1075]],
-        "married": [[0, 20000, 0.015], [20000, 50000, 0.019], [50000, 70000, 0.0245], [70000, 80000, 0.035], [80000, 150000, 0.05525], [150000, 500000, 0.0637], [500000, 1000000, 0.0897], [1000000, 999999999, 0.1075]],
-        "hoh": [[0, 20000, 0.015], [20000, 35000, 0.019], [35000, 40000, 0.035], [40000, 75000, 0.05525], [75000, 500000, 0.0637], [500000, 1000000, 0.0897], [1000000, 999999999, 0.1075]]
-      }
-    },
-    {
-      "name": "New Mexico",
-      "slug": "new-mexico",
-      "has_income_tax": true,
-      "top_rate": "5.9%",
-      "competitiveness_rank": 28,
-      "description": "New Mexico has graduated rates up to 5.9%. Improving climate.",
-      "brackets": {
-        "single": [[0, 16000, 0.017], [16000, 58000, 0.032], [58000, 999999999, 0.059]],
-        "married": [[0, 32000, 0.017], [32000, 116000, 0.032], [116000, 999999999, 0.059]],
-        "hoh": [[0, 16000, 0.017], [16000, 58000, 0.032], [58000, 999999999, 0.059]]
-      }
-    },
-    {
-      "name": "New York",
-      "slug": "new-york",
-      "has_income_tax": true,
-      "top_rate": "10.9%",
-      "competitiveness_rank": 50,
-      "description": "New York has very high progressive taxes up to 10.9% plus NYC local tax. One of the worst for high earners.",
-      "brackets": {
-        "single": [[0, 8500, 0.04], [8500, 11700, 0.045], [11700, 13900, 0.0525], [13900, 80650, 0.055], [80650, 215400, 0.06], [215400, 1077550, 0.0685], [1077550, 5000000, 0.0965], [5000000, 25000000, 0.103], [25000000, 999999999, 0.109]],
-        "married": [[0, 17000, 0.04], [17000, 23400, 0.045], [23400, 27800, 0.0525], [27800, 161300, 0.055], [161300, 323200, 0.06], [323200, 2155350, 0.0685], [2155350, 5000000, 0.0965], [5000000, 25000000, 0.103], [25000000, 999999999, 0.109]],
-        "hoh": [[0, 12800, 0.04], [12800, 17650, 0.045], [17650, 20900, 0.0525], [20900, 107650, 0.055], [107650, 269300, 0.06], [269300, 1616500, 0.0685], [1616500, 5000000, 0.0965], [5000000, 25000000, 0.103], [25000000, 999999999, 0.109]]
-      }
-    },
-    {
-      "name": "North Carolina",
-      "slug": "north-carolina",
-      "has_income_tax": true,
-      "top_rate": "4.5%",
-      "competitiveness_rank": 13,
-      "description": "North Carolina has a flat 4.5% income tax (phasing lower). Extremely competitive.",
-      "brackets": {
-        "single": [[0, 999999999, 0.045]],
-        "married": [[0, 999999999, 0.045]],
-        "hoh": [[0, 999999999, 0.045]]
-      }
-    },
-    {
-      "name": "North Dakota",
-      "slug": "north-dakota",
-      "has_income_tax": true,
-      "top_rate": "2.9%",
-      "competitiveness_rank": 11,
-      "description": "North Dakota has very low rates (top 2.9% for 2025). One of the best in the Midwest.",
-      "brackets": {
-        "single": [[0, 44725, 0.011], [44725, 999999999, 0.029]],
-        "married": [[0, 89450, 0.011], [89450, 999999999, 0.029]],
-        "hoh": [[0, 44725, 0.011], [44725, 999999999, 0.029]]
-      }
-    },
-    {
-      "name": "Ohio",
-      "slug": "ohio",
-      "has_income_tax": true,
-      "top_rate": "3.5%",
-      "competitiveness_rank": 39,
-      "description": "Ohio has graduated rates (moving toward flatter). Top rate ~3.5% in 2026.",
-      "brackets": {
-        "single": [[0, 26050, 0], [26050, 999999999, 0.0275]],
-        "married": [[0, 26050, 0], [26050, 999999999, 0.0275]],
-        "hoh": [[0, 26050, 0], [26050, 999999999, 0.0275]]
-      }
-    },
-    {
-      "name": "Oklahoma",
-      "slug": "oklahoma",
-      "has_income_tax": true,
-      "top_rate": "4.75%",
-      "competitiveness_rank": 19,
-      "description": "Oklahoma has low graduated rates up to 4.75%.",
-      "brackets": {
-        "single": [[0, 1000, 0.005], [1000, 2500, 0.01], [2500, 3750, 0.02], [3750, 4900, 0.025], [4900, 7200, 0.03], [7200, 8700, 0.04], [8700, 999999999, 0.0475]],
-        "married": [[0, 2000, 0.005], [2000, 5000, 0.01], [5000, 7500, 0.02], [7500, 9800, 0.025], [9800, 14400, 0.03], [14400, 17400, 0.04], [17400, 999999999, 0.0475]],
-        "hoh": [[0, 1000, 0.005], [1000, 2500, 0.01], [2500, 3750, 0.02], [3750, 4900, 0.025], [4900, 7200, 0.03], [7200, 8700, 0.04], [8700, 999999999, 0.0475]]
-      }
-    },
-    {
-      "name": "Oregon",
-      "slug": "oregon",
-      "has_income_tax": true,
-      "top_rate": "9.9%",
-      "competitiveness_rank": 35,
-      "description": "Oregon has high progressive rates up to 9.9% plus local taxes in some areas.",
-      "brackets": {
-        "single": [[0, 4100, 0.0475], [4100, 10200, 0.0675], [10200, 125000, 0.0875], [125000, 999999999, 0.099]],
-        "married": [[0, 8200, 0.0475], [8200, 20400, 0.0675], [20400, 250000, 0.0875], [250000, 999999999, 0.099]],
-        "hoh": [[0, 4100, 0.0475], [4100, 10200, 0.0675], [10200, 125000, 0.0875], [125000, 999999999, 0.099]]
-      }
-    },
-    {
-      "name": "Pennsylvania",
-      "slug": "pennsylvania",
-      "has_income_tax": true,
-      "top_rate": "3.07%",
-      "competitiveness_rank": 36,
-      "description": "Pennsylvania has a flat 3.07% income tax. Low rate but high local taxes in cities.",
-      "brackets": {
-        "single": [[0, 999999999, 0.0307]],
-        "married": [[0, 999999999, 0.0307]],
-        "hoh": [[0, 999999999, 0.0307]]
-      }
-    },
-    {
-      "name": "Rhode Island",
-      "slug": "rhode-island",
-      "has_income_tax": true,
-      "top_rate": "5.99%",
-      "competitiveness_rank": 40,
-      "description": "Rhode Island has three brackets up to 5.99%.",
-      "brackets": {
-        "single": [[0, 68200, 0.0375], [68200, 155050, 0.0475], [155050, 999999999, 0.0599]],
-        "married": [[0, 68200, 0.0375], [68200, 155050, 0.0475], [155050, 999999999, 0.0599]],
-        "hoh": [[0, 68200, 0.0375], [68200, 155050, 0.0475], [155050, 999999999, 0.0599]]
-      }
-    },
-    {
-      "name": "South Carolina",
-      "slug": "south-carolina",
-      "has_income_tax": true,
-      "top_rate": "6.4%",
-      "competitiveness_rank": 29,
-      "description": "South Carolina has six brackets up to 6.4% (phasing improvements).",
-      "brackets": {
-        "single": [[0, 3200, 0], [3200, 6400, 0.03], [6400, 9600, 0.04], [9600, 12800, 0.05], [12800, 16000, 0.06], [16000, 999999999, 0.064]],
-        "married": [[0, 6400, 0], [6400, 12800, 0.03], [12800, 19200, 0.04], [19200, 25600, 0.05], [25600, 32000, 0.06], [32000, 999999999, 0.064]],
-        "hoh": [[0, 3200, 0], [3200, 6400, 0.03], [6400, 9600, 0.04], [9600, 12800, 0.05], [12800, 16000, 0.06], [16000, 999999999, 0.064]]
-      }
-    },
-    {
-      "name": "South Dakota",
-      "slug": "south-dakota",
-      "has_income_tax": false,
-      "top_rate": "0%",
-      "competitiveness_rank": 2,
-      "description": "South Dakota has no state income tax. One of the absolute best tax climates.",
-      "brackets": {}
-    },
-    {
-      "name": "Tennessee",
-      "slug": "tennessee",
-      "has_income_tax": false,
-      "top_rate": "0%",
-      "competitiveness_rank": 8,
-      "description": "Tennessee fully eliminated its income tax (Hall tax). No income tax at all.",
-      "brackets": {}
-    },
-    {
-      "name": "Texas",
-      "slug": "texas",
-      "has_income_tax": false,
-      "top_rate": "0%",
-      "competitiveness_rank": 7,
-      "description": "Texas has no state income tax. Massive economy and huge draw for relocations.",
-      "brackets": {}
-    },
-    {
-      "name": "Utah",
-      "slug": "utah",
-      "has_income_tax": true,
-      "top_rate": "4.5%",
-      "competitiveness_rank": 15,
-      "description": "Utah has a flat 4.5% income tax. Very competitive.",
-      "brackets": {
-        "single": [[0, 999999999, 0.045]],
-        "married": [[0, 999999999, 0.045]],
-        "hoh": [[0, 999999999, 0.045]]
-      }
-    },
-    {
-      "name": "Vermont",
-      "slug": "vermont",
-      "has_income_tax": true,
-      "top_rate": "8.75%",
-      "competitiveness_rank": 42,
-      "description": "Vermont has high progressive rates up to 8.75%.",
-      "brackets": {
-        "single": [[0, 42100, 0.0335], [42100, 102200, 0.066], [102200, 196800, 0.076], [196800, 999999999, 0.0875]],
-        "married": [[0, 84200, 0.0335], [84200, 204400, 0.066], [204400, 393600, 0.076], [393600, 999999999, 0.0875]],
-        "hoh": [[0, 42100, 0.0335], [42100, 102200, 0.066], [102200, 196800, 0.076], [196800, 999999999, 0.0875]]
-      }
-    },
-    {
-      "name": "Virginia",
-      "slug": "virginia",
-      "has_income_tax": true,
-      "top_rate": "5.75%",
-      "competitiveness_rank": 30,
-      "description": "Virginia has five brackets up to 5.75%. Moderate rates.",
-      "brackets": {
-        "single": [[0, 3000, 0.02], [3000, 5000, 0.03], [5000, 17000, 0.05], [17000, 999999999, 0.0575]],
-        "married": [[0, 3000, 0.02], [3000, 5000, 0.03], [5000, 17000, 0.05], [17000, 999999999, 0.0575]],
-        "hoh": [[0, 3000, 0.02], [3000, 5000, 0.03], [5000, 17000, 0.05], [17000, 999999999, 0.0575]]
-      }
-    },
-    {
-      "name": "Washington",
-      "slug": "washington",
-      "has_income_tax": false,
-      "top_rate": "0%",
-      "competitiveness_rank": 45,
-      "description": "Washington has no traditional income tax but a 7% capital gains tax on high gains. Otherwise zero income tax.",
-      "brackets": {}
-    },
-    {
-      "name": "West Virginia",
-      "slug": "west-virginia",
-      "has_income_tax": true,
-      "top_rate": "6.5%",
-      "competitiveness_rank": 32,
-      "description": "West Virginia has five brackets up to 6.5%.",
-      "brackets": {
-        "single": [[0, 10000, 0.03], [10000, 25000, 0.04], [25000, 40000, 0.045], [40000, 60000, 0.06], [60000, 999999999, 0.065]],
-        "married": [[0, 10000, 0.03], [10000, 25000, 0.04], [25000, 40000, 0.045], [40000, 60000, 0.06], [60000, 999999999, 0.065]],
-        "hoh": [[0, 10000, 0.03], [10000, 25000, 0.04], [25000, 40000, 0.045], [40000, 60000, 0.06], [60000, 999999999, 0.065]]
-      }
-    },
-    {
-      "name": "Wisconsin",
-      "slug": "wisconsin",
-      "has_income_tax": true,
-      "top_rate": "7.65%",
-      "competitiveness_rank": 21,
-      "description": "Wisconsin has four brackets up to 7.65%.",
-      "brackets": {
-        "single": [[0, 12760, 0.035], [12760, 25520, 0.055], [25520, 280950, 0.06], [280950, 999999999, 0.0765]],
-        "married": [[0, 17000, 0.035], [17000, 34000, 0.055], [34000, 374600, 0.06], [374600, 999999999, 0.0765]],
-        "hoh": [[0, 12760, 0.035], [12760, 25520, 0.055], [25520, 280950, 0.06], [280950, 999999999, 0.0765]]
-      }
-    },
-    {
-      "name": "Wyoming",
-      "slug": "wyoming",
-      "has_income_tax": false,
-      "top_rate": "0%",
-      "competitiveness_rank": 1,
-      "description": "Wyoming has no state income tax and ranks #1 overall in tax competitiveness. Best in America.",
-      "brackets": {}
+  {
+    "name": "Alabama",
+    "slug": "alabama",
+    "has_income_tax": true,
+    "top_rate": "5%",
+    "competitiveness_rank": 37,
+    "description": "Alabama uses a progressive income tax system with a top marginal rate of 5%. For 2026, the state offers a standard deduction of up to $3,000 for single filers and $8,500 for married couples, which helps lower the overall tax burden for low-to-middle income families.",
+    "brackets": {
+      "single": [[0, 500, 0.02], [500, 3000, 0.04], [3000, 999999999, 0.05]],
+      "married": [[0, 1000, 0.02], [1000, 6000, 0.04], [6000, 999999999, 0.05]],
+      "hoh": [[0, 500, 0.02], [500, 3000, 0.04], [3000, 999999999, 0.05]]
     }
+  },
+  {
+    "name": "Alaska",
+    "slug": "alaska",
+    "has_income_tax": false,
+    "top_rate": "0%",
+    "competitiveness_rank": 4,
+    "description": "Alaska remains one of the most tax-friendly states in 2026 with no state income tax and no state-level sales tax. Residents also benefit from the annual Permanent Fund Dividend, making it a top choice for high earners and retirees.",
+    "brackets": {}
+  },
+  {
+    "name": "Arizona",
+    "slug": "arizona",
+    "has_income_tax": true,
+    "top_rate": "2.5%",
+    "competitiveness_rank": 14,
+    "description": "Arizona now utilizes a flat 2.5% income tax rate for all taxpayers in 2026. This streamlined system makes it highly competitive with neighboring states and simplifies filing for individuals at all income levels.",
+    "brackets": {
+      "single": [[0, 999999999, 0.025]],
+      "married": [[0, 999999999, 0.025]],
+      "hoh": [[0, 999999999, 0.025]]
+    }
+  },
+  {
+    "name": "Arkansas",
+    "slug": "arkansas",
+    "has_income_tax": true,
+    "top_rate": "3.9%",
+    "competitiveness_rank": 34,
+    "description": "Arkansas has aggressively reduced its income tax rates for 2026, now featuring a top marginal rate of 3.9%. The state continues to use a graduated system that remains competitive for middle and high-income earners in the region.",
+    "brackets": {
+      "single": [[0, 5499, 0.00], [5499, 10899, 0.02], [10899, 15599, 0.03], [15599, 25699, 0.034], [25699, 999999999, 0.039]],
+      "married": [[0, 5499, 0.00], [5499, 10899, 0.02], [10899, 15599, 0.03], [15599, 25699, 0.034], [25699, 999999999, 0.039]],
+      "hoh": [[0, 5499, 0.00], [5499, 10899, 0.02], [10899, 15599, 0.03], [15599, 25699, 0.034], [25699, 999999999, 0.039]]
+    }
+  },
+  {
+    "name": "California",
+    "slug": "california",
+    "has_income_tax": true,
+    "top_rate": "13.3%",
+    "competitiveness_rank": 48,
+    "description": "California maintains a highly progressive tax structure in 2026. While it offers a substantial standard deduction, high earners face a top rate of 13.3%, which increases to 14.3% for income over $1 million due to the mental health surcharge.",
+    "brackets": {
+      "single": [[0, 10756, 0.01], [10756, 25499, 0.02], [25499, 40245, 0.04], [40245, 55866, 0.06], [55866, 70606, 0.093], [70606, 360659, 0.103], [360659, 432787, 0.113], [432787, 721314, 0.123], [721314, 1000000, 0.133], [1000000, 999999999, 0.143]],
+      "married": [[0, 21512, 0.01], [21512, 50998, 0.02], [50998, 80490, 0.04], [80490, 111732, 0.06], [111732, 141212, 0.093], [141212, 721318, 0.103], [721318, 865574, 0.113], [865574, 1000000, 0.123], [1000000, 1442628, 0.133], [1442628, 999999999, 0.143]],
+      "hoh": [[0, 21527, 0.01], [21527, 51000, 0.02], [51000, 65744, 0.04], [65744, 81363, 0.06], [81363, 96102, 0.093], [96102, 490494, 0.103], [490494, 588592, 0.113], [588592, 980985, 0.123], [980985, 1000000, 0.133], [1000000, 999999999, 0.143]]
+    }
+  },
+  {
+    "name": "Colorado",
+    "slug": "colorado",
+    "has_income_tax": true,
+    "top_rate": "4.4%",
+    "competitiveness_rank": 33,
+    "description": "Colorado uses a flat 4.4% income tax rate in 2026. Because the state uses federal taxable income as its base, residents automatically benefit from federal standard deductions while enjoying a relatively low, single-rate state tax.",
+    "brackets": {
+      "single": [[0, 999999999, 0.044]],
+      "married": [[0, 999999999, 0.044]],
+      "hoh": [[0, 999999999, 0.044]]
+    }
+  },
+  {
+    "name": "Connecticut",
+    "slug": "connecticut",
+    "has_income_tax": true,
+    "top_rate": "6.99%",
+    "competitiveness_rank": 47,
+    "description": "Connecticut features a progressive tax system with seven brackets. For 2026, many residents benefit from recently enacted rate cuts to the bottom two brackets (now 2.0% and 4.5%), providing meaningful relief for low-to-middle income families.",
+    "brackets": {
+      "single": [[0, 10000, 0.02], [10000, 50000, 0.045], [50000, 100000, 0.055], [100000, 200000, 0.06], [200000, 250000, 0.065], [250000, 500000, 0.069], [500000, 999999999, 0.0699]],
+      "married": [[0, 20000, 0.02], [20000, 100000, 0.045], [100000, 200000, 0.055], [200000, 400000, 0.06], [400000, 500000, 0.065], [500000, 1000000, 0.069], [1000000, 999999999, 0.0699]],
+      "hoh": [[0, 16000, 0.02], [16000, 80000, 0.045], [80000, 160000, 0.055], [160000, 320000, 0.06], [320000, 400000, 0.065], [400000, 800000, 0.069], [800000, 999999999, 0.0699]]
+    }
+  },
+  {
+    "name": "Delaware",
+    "slug": "delaware",
+    "has_income_tax": true,
+    "top_rate": "6.6%",
+    "competitiveness_rank": 24,
+    "description": "Delaware employs a graduated tax system with rates ranging from 2.2% to 6.6%. Notably, the state applies the same brackets across all filing statuses, though it offers a higher standard deduction for married couples filing jointly.",
+    "brackets": {
+      "single": [[2000, 5000, 0.022], [5000, 10000, 0.039], [10000, 20000, 0.048], [20000, 25000, 0.052], [25000, 60000, 0.0555], [60000, 999999999, 0.066]],
+      "married": [[2000, 5000, 0.022], [5000, 10000, 0.039], [10000, 20000, 0.048], [20000, 25000, 0.052], [25000, 60000, 0.0555], [60000, 999999999, 0.066]],
+      "hoh": [[2000, 5000, 0.022], [5000, 10000, 0.039], [10000, 20000, 0.048], [20000, 25000, 0.052], [25000, 60000, 0.0555], [60000, 999999999, 0.066]]
+    }
+  },
+  {
+    "name": "District of Columbia",
+    "slug": "district-of-columbia",
+    "has_income_tax": true,
+    "top_rate": "10.75%",
+    "competitiveness_rank": 48,
+    "description": "The District of Columbia uses a highly progressive system with seven brackets. Rates for 2026 range from 4% to 10.75%, with the top rate applying to taxable income over $1 million. D.C. also follows federal standard deduction increases.",
+    "brackets": {
+      "single": [[0, 10000, 0.04], [10000, 40000, 0.06], [40000, 60000, 0.065], [60000, 250000, 0.085], [250000, 500000, 0.0925], [500000, 1000000, 0.0975], [1000000, 999999999, 0.1075]],
+      "married": [[0, 10000, 0.04], [10000, 40000, 0.06], [40000, 60000, 0.065], [60000, 250000, 0.085], [250000, 500000, 0.0925], [500000, 1000000, 0.0975], [1000000, 999999999, 0.1075]],
+      "hoh": [[0, 10000, 0.04], [10000, 40000, 0.06], [40000, 60000, 0.065], [60000, 250000, 0.085], [250000, 500000, 0.0925], [500000, 1000000, 0.0975], [1000000, 999999999, 0.1075]]
+    }
+  },
+  {
+    "name": "Florida",
+    "slug": "florida",
+    "has_income_tax": false,
+    "top_rate": "0%",
+    "competitiveness_rank": 5,
+    "description": "Florida remains one of the premier no-tax destinations in 2026. With no state income tax, estate tax, or inheritance tax, it continues to attract massive migration from high-tax states.",
+    "brackets": {}
+  },
+  {
+    "name": "Georgia",
+    "slug": "georgia",
+    "has_income_tax": true,
+    "top_rate": "4.99%",
+    "competitiveness_rank": 18,
+    "description": "Georgia has moved to a flat tax system for 2026, dropping the rate to 4.99% as of January. This change marks a significant shift toward a more competitive, single-rate system intended to spur economic growth.",
+    "brackets": {
+      "single": [[0, 999999999, 0.0499]],
+      "married": [[0, 999999999, 0.0499]],
+      "hoh": [[0, 999999999, 0.0499]]
+    }
+  },
+    {
+    "name": "Hawaii",
+    "slug": "hawaii",
+    "has_income_tax": true,
+    "top_rate": "11%",
+    "competitiveness_rank": 41,
+    "description": "Hawaii maintains a highly progressive 12-bracket system in 2026. While the state offers a beautiful lifestyle, high earners face a top marginal rate of 11%, one of the highest in the nation. The state frequently updates its rate schedules to reflect cost-of-living adjustments.",
+    "brackets": {
+      "single": [[0, 2400, 0.014], [2400, 4800, 0.032], [4800, 9600, 0.055], [9600, 14400, 0.064], [14400, 19200, 0.068], [19200, 24000, 0.072], [24000, 36000, 0.076], [36000, 48000, 0.079], [48000, 150000, 0.0825], [150000, 175000, 0.09], [175000, 200000, 0.1], [200000, 999999999, 0.11]],
+      "married": [[0, 4800, 0.014], [4800, 9600, 0.032], [9600, 19200, 0.055], [19200, 28800, 0.064], [28800, 38400, 0.068], [38400, 48000, 0.072], [48000, 72000, 0.076], [72000, 96000, 0.079], [96000, 300000, 0.0825], [300000, 350000, 0.09], [350000, 400000, 0.1], [400000, 999999999, 0.11]],
+      "hoh": [[0, 3600, 0.014], [3600, 7200, 0.032], [7200, 14400, 0.055], [14400, 21600, 0.064], [21600, 28800, 0.068], [28800, 36000, 0.072], [36000, 54000, 0.076], [54000, 72000, 0.079], [72000, 225000, 0.0825], [225000, 262500, 0.09], [262500, 300000, 0.1], [300000, 999999999, 0.11]]
+    }
+  },
+  {
+    "name": "Idaho",
+    "slug": "idaho",
+    "has_income_tax": true,
+    "top_rate": "5.695%",
+    "competitiveness_rank": 9,
+    "description": "Idaho utilizes a progressive tax system with rates that were recently adjusted for 2026. For single filers, the top rate of 5.695% kicks in at relatively low thresholds compared to other states, but the state offers a competitive standard deduction modeled after federal limits.",
+    "brackets": {
+      "single": [[0, 1662, 0.01], [1662, 4987, 0.03], [4987, 8311, 0.045], [8311, 999999999, 0.05695]],
+      "married": [[0, 3324, 0.01], [3324, 9974, 0.03], [9974, 16622, 0.045], [16622, 999999999, 0.05695]],
+      "hoh": [[0, 1662, 0.01], [1662, 4987, 0.03], [4987, 8311, 0.045], [8311, 999999999, 0.05695]]
+    }
+  },
+  {
+    "name": "Illinois",
+    "slug": "illinois",
+    "has_income_tax": true,
+    "top_rate": "4.95%",
+    "competitiveness_rank": 38,
+    "description": "Illinois continues to use a flat 4.95% income tax rate in 2026, meaning all taxpayers pay the same percentage regardless of income level. While the flat rate is simple, the state's overall tax burden is often cited as high due to property and local taxes.",
+    "brackets": {
+      "single": [[0, 999999999, 0.0495]],
+      "married": [[0, 999999999, 0.0495]],
+      "hoh": [[0, 999999999, 0.0495]]
+    }
+  },
+  {
+    "name": "Indiana",
+    "slug": "indiana",
+    "has_income_tax": true,
+    "top_rate": "2.95%",
+    "competitiveness_rank": 10,
+    "description": "Indiana has further reduced its flat individual income tax rate to 2.95% as of January 1, 2026. This move is part of a multi-year effort to lower tax burdens and remains one of the lowest flat rates in the United States.",
+    "brackets": {
+      "single": [[0, 999999999, 0.0295]],
+      "married": [[0, 999999999, 0.0295]],
+      "hoh": [[0, 999999999, 0.0295]]
+    }
+  },
+  {
+    "name": "Iowa",
+    "slug": "iowa",
+    "has_income_tax": true,
+    "top_rate": "3.8%",
+    "competitiveness_rank": 17,
+    "description": "2026 marks a landmark year for Iowa as it has completed its transition to a flat 3.8% tax rate for all taxable income levels. This simplified system replaces the previous multi-bracket graduated structure, making it highly competitive for high earners.",
+    "brackets": {
+      "single": [[0, 999999999, 0.038]],
+      "married": [[0, 999999999, 0.038]],
+      "hoh": [[0, 999999999, 0.038]]
+    }
+  },
+  {
+    "name": "Kansas",
+    "slug": "kansas",
+    "has_income_tax": true,
+    "top_rate": "5.58%",
+    "competitiveness_rank": 23,
+    "description": "Kansas uses a simple two-bracket system for 2026. The state has also recently increased its standard deduction and personal exemptions, providing significant relief for families and households compared to previous tax years.",
+    "brackets": {
+      "single": [[0, 23000, 0.052], [23000, 999999999, 0.0558]],
+      "married": [[0, 46000, 0.052], [46000, 999999999, 0.0558]],
+      "hoh": [[0, 23000, 0.052], [23000, 999999999, 0.0558]]
+    }
+  },
+  {
+    "name": "Kentucky",
+    "slug": "kentucky",
+    "has_income_tax": true,
+    "top_rate": "3.5%",
+    "competitiveness_rank": 25,
+    "description": "Kentucky has dropped its flat individual income tax rate to 3.5% effective January 1, 2026. This reduction is part of a sustained legislative effort to modernize the state's tax code and increase long-term economic competitiveness.",
+    "brackets": {
+      "single": [[0, 999999999, 0.035]],
+      "married": [[0, 999999999, 0.035]],
+      "hoh": [[0, 999999999, 0.035]]
+    }
+  },
+  {
+    "name": "Louisiana",
+    "slug": "louisiana",
+    "has_income_tax": true,
+    "top_rate": "3%",
+    "competitiveness_rank": 31,
+    "description": "Louisiana has moved to a flat 3% individual income tax rate for 2026, significantly simplifying its code. Additionally, the state has nearly doubled its standard deduction to $12,500, offering major savings for many taxpayers.",
+    "brackets": {
+      "single": [[0, 999999999, 0.03]],
+      "married": [[0, 999999999, 0.03]],
+      "hoh": [[0, 999999999, 0.03]]
+    }
+  },
+  {
+    "name": "Maine",
+    "slug": "maine",
+    "has_income_tax": true,
+    "top_rate": "8.95%",
+    "competitiveness_rank": 26,
+    "description": "Maine has implemented new tax brackets for 2026, adding higher-tier brackets for high-income earners while adjusting thresholds for inflation. The top rate of 8.95% now applies to income over $500,000 for single filers.",
+    "brackets": {
+      "single": [[0, 27450, 0.055], [27450, 64950, 0.0675], [64950, 144500, 0.0715], [144500, 500000, 0.0775], [500000, 999999999, 0.0895]],
+      "married": [[0, 54900, 0.055], [54900, 129900, 0.0675], [129900, 289000, 0.0715], [289000, 1000000, 0.0775], [1000000, 999999999, 0.0895]],
+      "hoh": [[0, 41150, 0.055], [41150, 97450, 0.0675], [97450, 216750, 0.0715], [216750, 750000, 0.0775], [750000, 999999999, 0.0895]]
+    }
+  },
+  {
+    "name": "Maryland",
+    "slug": "maryland",
+    "has_income_tax": true,
+    "top_rate": "6.5%",
+    "competitiveness_rank": 46,
+    "description": "Maryland employs a progressive system with rates reaching up to 6.5% for 2026. Users should note that Maryland also levies significant local income taxes, which vary by county but can reach as high as 3.2%.",
+    "brackets": {
+      "single": [[0, 1000, 0.02], [1000, 2000, 0.03], [2000, 3000, 0.04], [3000, 100000, 0.0475], [100000, 125000, 0.05], [125000, 150000, 0.0525], [150000, 250000, 0.055], [250000, 500000, 0.0575], [500000, 1000000, 0.0625], [1000000, 999999999, 0.065]],
+      "married": [[0, 1000, 0.02], [1000, 2000, 0.03], [2000, 3000, 0.04], [3000, 150000, 0.0475], [150000, 175000, 0.05], [175000, 225000, 0.0525], [225000, 300000, 0.055], [300000, 600000, 0.0575], [600000, 1200000, 0.0625], [1200000, 999999999, 0.065]],
+      "hoh": [[0, 1000, 0.02], [1000, 2000, 0.03], [2000, 3000, 0.04], [3000, 150000, 0.0475], [150000, 175000, 0.05], [175000, 225000, 0.0525], [225000, 300000, 0.055], [300000, 600000, 0.0575], [600000, 1200000, 0.0625], [1200000, 999999999, 0.065]]
+    }
+  },
+    {
+    "name": "Massachusetts",
+    "slug": "massachusetts",
+    "has_income_tax": true,
+    "top_rate": "9%",
+    "competitiveness_rank": 43,
+    "description": "Massachusetts uses a base flat rate of 5.0% for 2026. However, under the 'Fair Share Amendment,' an additional 4% surtax is applied to annual taxable income exceeding $1 million, resulting in a top effective rate of 9% for high earners.",
+    "brackets": {
+      "single": [[0, 1000000, 0.05], [1000000, 999999999, 0.09]],
+      "married": [[0, 1000000, 0.05], [1000000, 999999999, 0.09]],
+      "hoh": [[0, 1000000, 0.05], [1000000, 999999999, 0.09]]
+    }
+  },
+  {
+    "name": "Michigan",
+    "slug": "michigan",
+    "has_income_tax": true,
+    "top_rate": "4.25%",
+    "competitiveness_rank": 16,
+    "description": "Michigan maintains a simple flat tax of 4.25% for the 2026 tax year. The state also provides a personal exemption ($5,900 for 2026) which is subtracted from adjusted gross income before the flat rate is applied, offering a clear and predictable tax structure.",
+    "brackets": {
+      "single": [[0, 999999999, 0.0425]],
+      "married": [[0, 999999999, 0.0425]],
+      "hoh": [[0, 999999999, 0.0425]]
+    }
+  },
+  {
+    "name": "Minnesota",
+    "slug": "minnesota",
+    "has_income_tax": true,
+    "top_rate": "9.85%",
+    "competitiveness_rank": 44,
+    "description": "Minnesota continues to employ one of the nation's most progressive tax systems in 2026, with four brackets and a top rate of 9.85%. For 2026, the state has adjusted bracket thresholds upward to account for inflation, providing minor relief to taxpayers.",
+    "brackets": {
+      "single": [[0, 33310, 0.0535], [33310, 109430, 0.068], [109430, 203150, 0.0785], [203150, 999999999, 0.0985]],
+      "married": [[0, 48700, 0.0535], [48700, 193480, 0.068], [193480, 337930, 0.0785], [337930, 999999999, 0.0985]],
+      "hoh": [[0, 41010, 0.0535], [41010, 164800, 0.068], [164800, 270060, 0.0785], [270060, 999999999, 0.0985]]
+    }
+  },
+  {
+    "name": "Mississippi",
+    "slug": "mississippi",
+    "has_income_tax": true,
+    "top_rate": "4%",
+    "competitiveness_rank": 27,
+    "description": "As of 2026, Mississippi has completed its transition to a flat 4.0% income tax rate. Notably, the state exempts the first $10,000 of income for individuals and $20,000 for married couples, effectively making it one of the lowest-tax states in the Southeast.",
+    "brackets": {
+      "single": [[0, 10000, 0.0], [10000, 999999999, 0.04]],
+      "married": [[0, 20000, 0.0], [20000, 999999999, 0.04]],
+      "hoh": [[0, 10000, 0.0], [10000, 999999999, 0.04]]
+    }
+  },
+  {
+    "name": "Missouri",
+    "slug": "missouri",
+    "has_income_tax": true,
+    "top_rate": "4.7%",
+    "competitiveness_rank": 12,
+    "description": "Missouri continues its downward rate trend in 2026 with a top marginal rate of 4.7%. The state uses a simplified graduated system where most taxable income above a small base threshold is taxed at this competitive single rate.",
+    "brackets": {
+      "single": [[0, 1510, 0.02], [1510, 999999999, 0.047]],
+      "married": [[0, 1510, 0.02], [1510, 999999999, 0.047]],
+      "hoh": [[0, 1510, 0.02], [1510, 999999999, 0.047]]
+    }
+  },
+  {
+    "name": "Montana",
+    "slug": "montana",
+    "has_income_tax": true,
+    "top_rate": "5.9%",
+    "competitiveness_rank": 6,
+    "description": "For 2026, Montana has moved to a two-bracket system with a top rate of 5.9%. This streamlined structure, combined with the lack of a state sales tax, makes Montana highly competitive for residents comparing overall tax burdens.",
+    "brackets": {
+      "single": [[0, 21100, 0.047], [21100, 999999999, 0.059]],
+      "married": [[0, 42200, 0.047], [42200, 999999999, 0.059]],
+      "hoh": [[0, 21100, 0.047], [21100, 999999999, 0.059]]
+    }
+  },
+  {
+    "name": "Nebraska",
+    "slug": "nebraska",
+    "has_income_tax": true,
+    "top_rate": "5.2%",
+    "competitiveness_rank": 22,
+    "description": "Nebraska employs a progressive system with four brackets in 2026, topping out at 5.2%. The state has adjusted its bracket thresholds for inflation in 2026, ensuring that wage growth doesn't inadvertently push taxpayers into higher tiers.",
+    "brackets": {
+      "single": [[0, 3700, 0.0246], [3700, 22100, 0.0351], [22100, 35550, 0.0463], [35550, 999999999, 0.052]],
+      "married": [[0, 7400, 0.0246], [7400, 44200, 0.0351], [44200, 71100, 0.0463], [71100, 999999999, 0.052]],
+      "hoh": [[0, 5400, 0.0246], [5400, 34200, 0.0351], [34200, 51100, 0.0463], [51100, 999999999, 0.052]]
+    }
+  },
+  {
+    "name": "Nevada",
+    "slug": "nevada",
+    "has_income_tax": false,
+    "top_rate": "0%",
+    "competitiveness_rank": 20,
+    "description": "Nevada continues to have no state income tax on wages or salaries in 2026. This constitutional prohibition remains a cornerstone of the state's tax policy, making it a primary destination for West Coast relocations.",
+    "brackets": {}
+  },
+  {
+    "name": "New Hampshire",
+    "slug": "new-hampshire",
+    "has_income_tax": false,
+    "top_rate": "0%",
+    "competitiveness_rank": 3,
+    "description": "Major Update for 2026: New Hampshire has officially repealed its tax on interest and dividends as of January 1, 2025. This means for the 2026 tax season, New Hampshire has no state-level tax on any form of individual income, including wages and investments.",
+    "brackets": {}
+  },
+  {
+    "name": "New Jersey",
+    "slug": "new-jersey",
+    "has_income_tax": true,
+    "top_rate": "10.75%",
+    "competitiveness_rank": 49,
+    "description": "New Jersey maintains a highly progressive structure in 2026 with seven brackets. Rates range from 1.4% to 10.75%, with the top rate applying to income over $1 million. Brackets for married couples are designed to mitigate the 'marriage penalty' at lower income levels.",
+    "brackets": {
+      "single": [[0, 20000, 0.014], [20000, 35000, 0.0175], [35000, 40000, 0.035], [40000, 75000, 0.05525], [75000, 500000, 0.0637], [500000, 1000000, 0.0897], [1000000, 999999999, 0.1075]],
+      "married": [[0, 20000, 0.014], [20000, 50000, 0.0175], [50000, 70000, 0.0245], [70000, 80000, 0.035], [80000, 150000, 0.05525], [150000, 500000, 0.0637], [500000, 1000000, 0.0897], [1000000, 999999999, 0.1075]],
+      "hoh": [[0, 20000, 0.014], [20000, 50000, 0.0175], [50000, 70000, 0.0245], [70000, 80000, 0.035], [80000, 150000, 0.05525], [150000, 500000, 0.0637], [500000, 1000000, 0.0897], [1000000, 999999999, 0.1075]]
+    }
+  },
+    {
+    "name": "New Mexico",
+    "slug": "new-mexico",
+    "has_income_tax": true,
+    "top_rate": "5.9%",
+    "competitiveness_rank": 28,
+    "description": "New Mexico employs a progressive system with rates ranging from 1.5% to 5.9% for the 2026 tax year. The state has adjusted its brackets for inflation, and the top rate now applies to income over $210,000 for single filers and $315,000 for joint filers.",
+    "brackets": {
+      "single": [[0, 5500, 0.015], [5500, 11000, 0.03], [11000, 16000, 0.045], [16000, 210000, 0.049], [210000, 999999999, 0.059]],
+      "married": [[0, 8000, 0.015], [8000, 16000, 0.03], [16000, 24000, 0.045], [24000, 315000, 0.049], [315000, 999999999, 0.059]],
+      "hoh": [[0, 8000, 0.015], [8000, 16000, 0.03], [16000, 24000, 0.045], [24000, 315000, 0.049], [315000, 999999999, 0.059]]
+    }
+  },
+  {
+    "name": "New York",
+    "slug": "new-york",
+    "has_income_tax": true,
+    "top_rate": "10.9%",
+    "competitiveness_rank": 50,
+    "description": "New York maintains one of the nation's most complex tax structures in 2026, with rates reaching 10.9% for extremely high earners. Please note that residents of New York City are subject to an additional local income tax ranging from approximately 3.078% to 3.876%.",
+    "brackets": {
+      "single": [[0, 8500, 0.04], [8500, 11700, 0.045], [11700, 13900, 0.0525], [13900, 80650, 0.055], [80650, 215400, 0.06], [215400, 1077550, 0.0685], [1077550, 5000000, 0.0965], [5000000, 25000000, 0.103], [25000000, 999999999, 0.109]],
+      "married": [[0, 17150, 0.04], [17150, 23600, 0.045], [23600, 27900, 0.0525], [27900, 161550, 0.055], [161550, 323200, 0.06], [323200, 2155350, 0.0685], [2155350, 5000000, 0.0965], [5000000, 25000000, 0.103], [25000000, 999999999, 0.109]],
+      "hoh": [[0, 12800, 0.04], [12800, 17650, 0.045], [17650, 20900, 0.0525], [20900, 107650, 0.055], [107650, 269300, 0.06], [269300, 1616500, 0.0685], [1616500, 5000000, 0.0965], [5000000, 25000000, 0.103], [25000000, 999999999, 0.109]]
+    }
+  },
+  {
+    "name": "North Carolina",
+    "slug": "north-carolina",
+    "has_income_tax": true,
+    "top_rate": "3.99%",
+    "competitiveness_rank": 13,
+    "description": "For the 2026 tax year, North Carolina has reduced its flat individual income tax rate to 3.99%. This competitive rate applies to all taxable income, simplifying the code while maintaining a high standard deduction for all residents.",
+    "brackets": {
+      "single": [[0, 999999999, 0.0399]],
+      "married": [[0, 999999999, 0.0399]],
+      "hoh": [[0, 999999999, 0.0399]]
+    }
+  },
+  {
+    "name": "North Dakota",
+    "slug": "north-dakota",
+    "has_income_tax": true,
+    "top_rate": "2.5%",
+    "competitiveness_rank": 11,
+    "description": "North Dakota features some of the lowest income tax rates in the country for 2026, with a top rate of just 2.5%. The state provides several tiers of rates, but many middle-income residents will find themselves in the 1.95% bracket or lower.",
+    "brackets": {
+      "single": [[0, 47150, 0.0], [47150, 238200, 0.0195], [238200, 999999999, 0.025]],
+      "married": [[0, 78775, 0.0], [78775, 289975, 0.0195], [289975, 999999999, 0.025]],
+      "hoh": [[0, 63175, 0.0], [63175, 264100, 0.0195], [264100, 999999999, 0.025]]
+    }
+  },
+  {
+    "name": "Ohio",
+    "slug": "ohio",
+    "has_income_tax": true,
+    "top_rate": "3.5%",
+    "competitiveness_rank": 39,
+    "description": "Ohio has streamlined its tax code for 2026 into a three-bracket system. Residents with taxable income under $26,050 pay 0%, while those over $100,000 are subject to the top marginal rate of 3.5%. Local municipalities and school districts may levy additional taxes.",
+    "brackets": {
+      "single": [[0, 26050, 0.0], [26050, 100000, 0.0275], [100000, 999999999, 0.035]],
+      "married": [[0, 26050, 0.0], [26050, 100000, 0.0275], [100000, 999999999, 0.035]],
+      "hoh": [[0, 26050, 0.0], [26050, 100000, 0.0275], [100000, 999999999, 0.035]]
+    }
+  },
+  {
+    "name": "Oklahoma",
+    "slug": "oklahoma",
+    "has_income_tax": true,
+    "top_rate": "4.75%",
+    "competitiveness_rank": 19,
+    "description": "Oklahoma utilizes a six-tier progressive tax system in 2026. Rates range from 0.25% to a top rate of 4.75%. The state recently increased its standard deduction limits, which align with federal levels, to provide relief to lower-income households.",
+    "brackets": {
+      "single": [[0, 1000, 0.0025], [1000, 2500, 0.0075], [2500, 3750, 0.0175], [3750, 4900, 0.0275], [4900, 7200, 0.0375], [7200, 999999999, 0.0475]],
+      "married": [[0, 2000, 0.0025], [2000, 5000, 0.0075], [5000, 7500, 0.0175], [7500, 9800, 0.0275], [9800, 14400, 0.0375], [14400, 999999999, 0.0475]],
+      "hoh": [[0, 2000, 0.0025], [2000, 5000, 0.0075], [5000, 7500, 0.0175], [7500, 9800, 0.0275], [9800, 14400, 0.0375], [14400, 999999999, 0.0475]]
+    }
+  },
+  {
+    "name": "Oregon",
+    "slug": "oregon",
+    "has_income_tax": true,
+    "top_rate": "9.9%",
+    "competitiveness_rank": 35,
+    "description": "Oregon features high progressive tax rates in 2026, reaching 9.9% for income over $125,000 (single) or $250,000 (joint). Notably, Oregon has no state sales tax, which balances the overall tax burden for many residents.",
+    "brackets": {
+      "single": [[0, 4400, 0.0475], [4400, 11100, 0.0675], [11100, 125000, 0.0875], [125000, 999999999, 0.099]],
+      "married": [[0, 8800, 0.0475], [8800, 22200, 0.0675], [22200, 250000, 0.0875], [250000, 999999999, 0.099]],
+      "hoh": [[0, 8800, 0.0475], [8800, 22200, 0.0675], [22200, 250000, 0.0875], [250000, 999999999, 0.099]]
+    }
+  },
+  {
+    "name": "Pennsylvania",
+    "slug": "pennsylvania",
+    "has_income_tax": true,
+    "top_rate": "3.07%",
+    "competitiveness_rank": 36,
+    "description": "Pennsylvania maintains a low flat income tax rate of 3.07% for the 2026 tax year. While the state rate is among the lowest in the nation, residents should be aware that many local municipalities and school districts levy their own earned income taxes.",
+    "brackets": {
+      "single": [[0, 999999999, 0.0307]],
+      "married": [[0, 999999999, 0.0307]],
+      "hoh": [[0, 999999999, 0.0307]]
+    }
+  },
+    {
+    "name": "Rhode Island",
+    "slug": "rhode-island",
+    "has_income_tax": true,
+    "top_rate": "5.99%",
+    "competitiveness_rank": 40,
+    "description": "Rhode Island uses a three-bracket progressive system for 2026. For the 2026 tax year, the state has increased its standard deduction to $11,200 for singles and $22,400 for married couples, with thresholds adjusted for inflation to help maintain taxpayer purchasing power.",
+    "brackets": {
+      "single": [[0, 75450, 0.0375], [75450, 171550, 0.0475], [171550, 999999999, 0.0599]],
+      "married": [[0, 75450, 0.0375], [75450, 171550, 0.0475], [171550, 999999999, 0.0599]],
+      "hoh": [[0, 75450, 0.0375], [75450, 171550, 0.0475], [171550, 999999999, 0.0599]]
+    }
+  },
+  {
+    "name": "South Carolina",
+    "slug": "south-carolina",
+    "has_income_tax": true,
+    "top_rate": "6.0%",
+    "competitiveness_rank": 29,
+    "description": "South Carolina continues its multi-year phased reduction of individual income tax rates in 2026, moving toward a goal of a flat 6.0% rate. For 2026, the state has simplified its brackets and updated withholding tables to reflect these ongoing cuts.",
+    "brackets": {
+      "single": [[0, 3460, 0.0], [3460, 17330, 0.03], [17330, 999999999, 0.06]],
+      "married": [[0, 6920, 0.0], [6920, 34660, 0.03], [34660, 999999999, 0.06]],
+      "hoh": [[0, 3460, 0.0], [3460, 17330, 0.03], [17330, 999999999, 0.06]]
+    }
+  },
+  {
+    "name": "South Dakota",
+    "slug": "south-dakota",
+    "has_income_tax": false,
+    "top_rate": "0%",
+    "competitiveness_rank": 2,
+    "description": "South Dakota remains one of the few states with no personal income tax in 2026. This applies to wages, salaries, capital gains, and investment income, making it one of the most tax-friendly environments in the United States.",
+    "brackets": {}
+  },
+  {
+    "name": "Tennessee",
+    "slug": "tennessee",
+    "has_income_tax": false,
+    "top_rate": "0%",
+    "competitiveness_rank": 8,
+    "description": "Tennessee has no state income tax on work income, salaries, or wages in 2026. Following the full repeal of the Hall Income Tax, interest and dividends also remain completely untaxed at the state level.",
+    "brackets": {}
+  },
+  {
+    "name": "Texas",
+    "slug": "texas",
+    "has_income_tax": false,
+    "top_rate": "0%",
+    "competitiveness_rank": 7,
+    "description": "Texas maintains its long-standing constitutional prohibition on personal income tax through 2026. The state's tax-free status on individual earnings continues to be a primary driver for corporate and residential relocation.",
+    "brackets": {}
+  },
+  {
+    "name": "Utah",
+    "slug": "utah",
+    "has_income_tax": true,
+    "top_rate": "4.55%",
+    "competitiveness_rank": 15,
+    "description": "Utah employs a flat individual income tax rate of 4.55% for 2026. The state tax is based on federal adjusted gross income, and Utah also offers a unique taxpayer credit that phases out as income increases.",
+    "brackets": {
+      "single": [[0, 999999999, 0.0455]],
+      "married": [[0, 999999999, 0.0455]],
+      "hoh": [[0, 999999999, 0.0455]]
+    }
+  },
+  {
+    "name": "Vermont",
+    "slug": "vermont",
+    "has_income_tax": true,
+    "top_rate": "8.75%",
+    "competitiveness_rank": 42,
+    "description": "Vermont uses a progressive system with five brackets reaching up to 8.75% in 2026. The state has adjusted its income thresholds for 2026 based on the Consumer Price Index to ensure the brackets stay aligned with inflation.",
+    "brackets": {
+      "single": [[0, 45250, 0.0335], [45250, 109850, 0.066], [109850, 229150, 0.076], [229150, 999999999, 0.0875]],
+      "married": [[0, 75550, 0.0335], [75550, 182650, 0.066], [182650, 278350, 0.076], [278350, 999999999, 0.0875]],
+      "hoh": [[0, 60600, 0.0335], [60600, 156450, 0.066], [156450, 253300, 0.076], [253300, 999999999, 0.0875]]
+    }
+  },
+  {
+    "name": "Virginia",
+    "slug": "virginia",
+    "has_income_tax": true,
+    "top_rate": "7.75%",
+    "competitiveness_rank": 30,
+    "description": "Significant 2026 Update: Virginia has introduced a new top tax bracket of 7.75% for income exceeding $1 million. Additionally, the state has increased its standard deduction to $10,000 for singles and $20,000 for married couples for the 2026 tax year.",
+    "brackets": {
+      "single": [[0, 3000, 0.02], [3000, 5000, 0.03], [5000, 17000, 0.05], [17000, 1000000, 0.0575], [1000000, 999999999, 0.0775]],
+      "married": [[0, 3000, 0.02], [3000, 5000, 0.03], [5000, 17000, 0.05], [17000, 1000000, 0.0575], [1000000, 999999999, 0.0775]],
+      "hoh": [[0, 3000, 0.02], [3000, 5000, 0.03], [5000, 17000, 0.05], [17000, 1000000, 0.0575], [1000000, 999999999, 0.0775]]
+    }
+  },
+  {
+    "name": "Washington",
+    "slug": "washington",
+    "has_income_tax": false,
+    "top_rate": "0%",
+    "competitiveness_rank": 45,
+    "description": "Washington has no personal income tax on wages in 2026. However, the state maintains a 7% capital gains tax on long-term assets exceeding $250,000. There are ongoing legislative discussions regarding a 9.9% 'Millionaire's Tax' on high earners.",
+    "brackets": {}
+  },
+  {
+    "name": "West Virginia",
+    "slug": "west-virginia",
+    "has_income_tax": true,
+    "top_rate": "4.82%",
+    "competitiveness_rank": 32,
+    "description": "West Virginia has implemented significant rate reductions for 2026, with the top marginal rate dropping to 4.82%. This is part of a series of retroactive tax cuts designed to make the state more competitive in the Appalachian region.",
+    "brackets": {
+      "single": [[0, 10000, 0.0222], [10000, 25000, 0.0296], [25000, 40000, 0.0333], [40000, 60000, 0.0444], [60000, 999999999, 0.0482]],
+      "married": [[0, 10000, 0.0222], [10000, 25000, 0.0296], [25000, 40000, 0.0333], [40000, 60000, 0.0444], [60000, 999999999, 0.0482]],
+      "hoh": [[0, 10000, 0.0222], [10000, 25000, 0.0296], [25000, 40000, 0.0333], [40000, 60000, 0.0444], [60000, 999999999, 0.0482]]
+    }
+  },
+  {
+    "name": "Wisconsin",
+    "slug": "wisconsin",
+    "has_income_tax": true,
+    "top_rate": "7.65%",
+    "competitiveness_rank": 21,
+    "description": "Wisconsin uses a four-tier progressive tax system for 2026. For the 2026 tax year, the state has adjusted its standard deduction to $16,100 for singles and $32,200 for joint filers to match federal inflation adjustments.",
+    "brackets": {
+      "single": [[0, 13810, 0.035], [13810, 27630, 0.044], [27630, 304170, 0.053], [304170, 999999999, 0.0765]],
+      "married": [[0, 18420, 0.035], [18420, 36840, 0.044], [36840, 405550, 0.053], [405550, 999999999, 0.0765]],
+      "hoh": [[0, 13810, 0.035], [13810, 27630, 0.044], [27630, 304170, 0.053], [304170, 999999999, 0.0765]]
+    }
+  },
+  {
+    "name": "Wyoming",
+    "slug": "wyoming",
+    "has_income_tax": false,
+    "top_rate": "0%",
+    "competitiveness_rank": 1,
+    "description": "Wyoming ranks #1 on the 2026 State Tax Competitiveness Index. It has no individual or corporate income tax, no estate tax, and maintains a very low effective property tax rate of 0.55%, making it the most tax-friendly state in the country.",
+    "brackets": {}
+  }
   ]
 }

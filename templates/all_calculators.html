@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}All 2026 State Tax Calculators | StatesTaxCalc{% endblock %}
+
+{% block head_extra %}
+<style>
+    .directory-hero {
+        background: linear-gradient(135deg, rgba(10, 19, 33, 0.92) 0%, rgba(30, 41, 55, 0.92) 100%);
+        min-height: 30vh;
+        position: relative;
+        overflow: hidden;
+    }
+    .map-bg {
+        position: absolute;
+        inset: 0;
+        background: url("{{ url_for('static', filename='us-map.png') }}") center/cover no-repeat;
+        opacity: 0.15;
+        z-index: 0;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="directory-hero d-flex align-items-center">
+    <div class="map-bg"></div>
+    <div class="container position-relative text-center">
+        <h1 class="display-4 fw-bold text-white">All 2026 State Tax Calculators</h1>
+        <p class="text-light">Select your state to calculate precise 2026 take-home pay</p>
+    </div>
+</section>
+
+<div class="container py-5">
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+        {% for state in states %}
+        <div class="col">
+            <a href="/tax-calculator/{{ state.slug }}" class="btn btn-outline-light w-100 text-start py-3 border-secondary hover-lift">
+                {{ state.name }}
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
