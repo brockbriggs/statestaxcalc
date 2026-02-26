@@ -146,12 +146,28 @@ def blog_post(slug):
 
 @app.route('/sitemap.xml')
 def sitemap():
-    xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    # Change domain to your actual production domain for SEO
-    domain = "https://statestaxcalc.com" 
-    xml += f'<url><loc>{domain}/</loc></url>\n'
+    # Use your actual production domain for SEO
+    domain = "https://statestaxcalc.com"
+    xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    
+    # 1. Add Homepage
+    xml += f'  <url><loc>{domain}/</loc><priority>1.0</priority></url>\n'
+    
+    # 2. Add All-Calculators Directory
+    xml += f'  <url><loc>{domain}/all-calculators</loc><priority>0.9</priority></url>\n'
+    
+    # 3. Add Blog Index
+    xml += f'  <url><loc>{domain}/blog</loc><priority>0.9</priority></url>\n'
+    
+    # 4. Add State Calculator Pages
     for s in STATES:
-        xml += f'<url><loc>{domain}/tax-calculator/{s["slug"]}</loc></url>\n'
+        xml += f'  <url><loc>{domain}/tax-calculator/{s["slug"]}</loc><priority>0.8</priority></url>\n'
+    
+    # 5. Add All Blog Posts
+    for post in blogs:
+        xml += f'  <url><loc>{domain}/blog/{post["slug"]}</loc><priority>0.7</priority></url>\n'
+        
     xml += '</urlset>'
     return xml, 200, {'Content-Type': 'application/xml'}
 
