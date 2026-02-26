@@ -125,3 +125,4 @@ window.shareResults = function () {
         alert("✅ Link copied to clipboard!");
     }
 };
+
