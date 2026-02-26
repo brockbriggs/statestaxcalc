@@ -1,4 +1,4 @@
-/* static/css/style.css - Exact match to your 4 screenshots */
+/* static/css/style.css */
 
 :root {
     --bg: #0a1321;
@@ -15,7 +15,7 @@ body {
     min-height: 100vh;
 }
 
-/* Navbar - exact match */
+/* Navbar */
 .navbar {
     background: rgba(10, 19, 33, 0.97) !important;
     backdrop-filter: blur(12px);
@@ -60,26 +60,45 @@ body {
     color: var(--green);
 }
 
-/* Map background (subtle like your screenshots) */
+/* Map background - Local us-map.png */
 .map-bg {
     position: absolute;
     inset: 0;
-    background: url('https://i.imgur.com/2vK8zL9.png') center/cover no-repeat; /* dark US map with green states */
-    opacity: 0.12;
+    background: url("../us-map.png") center/cover no-repeat;
+    opacity: 0.15;
     pointer-events: none;
-    z-index: -1;
+    z-index: 0;
 }
 
 /* Blog & Homepage cards */
 .blog-card, .feature-card {
+    background: var(--card);
+    border: none;
+    border-radius: 20px;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
+
 .blog-card:hover, .feature-card:hover {
     transform: translateY(-16px);
     box-shadow: 0 30px 60px rgba(0,0,0,0.5);
 }
 
-/* Force visible text on dark backgrounds - site-wide fix */
+.card-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--green);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.4rem;
+}
+
+/* Force visible text on dark backgrounds */
 .card,
 .right-panel,
 .left-panel {
@@ -94,22 +113,18 @@ small, .small {
     color: #94a3b8 !important;
 }
 
-/* Chart.js legend & labels */
+/* Chart.js adjustments */
 #taxPieChart {
     filter: brightness(1.1);
 }
 
-.chartjs-render-monitor {
-    color: #e2e8f0 !important;
-}
-
-/* Table styling for Blog Content */
+/* --- NEW: Blog Table Styling --- */
 .blog-content table {
     width: 100%;
     margin-bottom: 2rem;
     color: var(--text);
     border-collapse: collapse;
-    background: rgba(30, 41, 55, 0.5); /* Semi-transparent card color */
+    background: rgba(30, 41, 55, 0.5);
     border-radius: 8px;
     overflow: hidden;
 }
@@ -118,11 +133,11 @@ small, .small {
 .blog-content td {
     padding: 12px 15px;
     text-align: left;
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle grid lines */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Visible grid lines */
 }
 
 .blog-content th {
-    background-color: rgba(16, 185, 129, 0.1); /* Subtle green for headers */
+    background-color: rgba(16, 185, 129, 0.1); /* Subtle brand green */
     color: var(--green);
     font-weight: 700;
     text-transform: uppercase;
@@ -131,5 +146,25 @@ small, .small {
 }
 
 .blog-content tr:hover {
-    background-color: rgba(255, 255, 255, 0.03); /* Hover effect for rows */
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* --- NEW: Responsive Table Wrapper --- */
+/* If you wrap tables in a div with this class, they will scroll on mobile */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Responsive container for markdown-generated tables */
+.table-responsive table {
+    min-width: 600px; /* Ensures tables don't get too squished */
+    width: 100%;
+}
+
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }

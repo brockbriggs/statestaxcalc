@@ -54,7 +54,24 @@ def state_page(slug):
     state = next((s for s in STATES if s['slug'] == slug), None)
     if not state:
         abort(404)
-    return render_template('state_calculator.html', state=state, states=STATES)
+    
+    # Filter for blogs that mention this state's name
+    related_blogs = [
+        post for post in blogs 
+        if state['name'].lower() in post['title'].lower() 
+        or state['name'].lower() in post['content'].lower()
+    ]
+    
+    # Fallback to general guides if no state-specific match
+    if not related_blogs:
+        related_blogs = blogs[:3]
+
+    return render_template(
+        'state_calculator.html', 
+        state=state, 
+        states=STATES, 
+        related_blogs=related_blogs[:3]
+    )
 
 @app.route('/calculate', methods=['POST'])
 def calculate():

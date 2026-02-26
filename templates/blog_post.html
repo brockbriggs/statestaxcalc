@@ -1,4 +1,3 @@
-<!-- templates/blog_post.html -->
 {% extends "base.html" %}
 
 {% block title %}{{ post.title }}{% endblock %}
@@ -7,99 +6,105 @@
 {% block head_extra %}
 <style>
     .blog-hero {
-        background: linear-gradient(135deg, #0a1321 0%, #1e2937 100%);
+        background: linear-gradient(135deg, rgba(10, 19, 33, 0.95) 0%, rgba(30, 41, 55, 0.95) 100%);
         padding: 80px 0 60px;
+        position: relative;
+        overflow: hidden;
+    }
+    .map-bg {
+        position: absolute;
+        inset: 0;
+        /* Correctly references your local background image */
+        background: url("{{ url_for('static', filename='us-map.png') }}") center/cover no-repeat;
+        opacity: 0.15;
+        z-index: 0;
     }
     .blog-content {
-        font-size: 1.15rem;
-        line-height: 1.85;
+        font-size: 1.1rem;
+        line-height: 1.8;
         color: #e2e8f0;
+        position: relative;
+        z-index: 1;
     }
-    .blog-content h2, .blog-content h3 {
-        color: white;
-        margin-top: 2.5rem;
+    /* Prevents wide tables from bleeding into the sidebar area */
+    .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 2rem;
     }
     .sidebar {
         position: sticky;
         top: 100px;
-    }
-    .toc a {
-        color: #94a3b8;
-        text-decoration: none;
-    }
-    .toc a:hover {
-        color: #10b981;
+        z-index: 10;
     }
     .related-card {
         background: #1e2937;
-        border-radius: 16px;
+        border-radius: 12px;
+        border: 1px solid rgba(255,255,255,0.05);
         transition: all 0.3s ease;
     }
     .related-card:hover {
-        transform: translateY(-6px);
+        transform: translateY(-3px);
+        background: #263345;
     }
 </style>
 {% endblock %}
 
 {% block content %}
 <div class="blog-hero">
-    <div class="container">
+    <div class="map-bg"></div>
+    <div class="container position-relative">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-12">
                 <h1 class="display-4 fw-bold mb-3" style="letter-spacing: -1.5px;">{{ post.title }}</h1>
-                <p class="text-muted fs-5">
-                    By StateTaxCalc Team • {{ post.date }}
-                </p>
+                <p class="text-muted fs-5">By StatesTaxCalc Team • {{ post.date }}</p>
             </div>
         </div>
     </div>
 </div>
 
 <div class="container py-5">
-    <div class="row">
-        <!-- Main Content -->
-        <div class="col-lg-8">
+    <div class="row g-5"> <div class="col-lg-8">
             <div class="blog-content">
-                {{ content | safe }}
+                <div class="table-responsive">
+                    {{ content | safe }}
+                </div>
             </div>
 
-            <!-- Bottom CTA -->
-            <div class="mt-5 pt-5 border-top text-center">
-                <h4 class="mb-3">Ready to see your exact 2026 numbers?</h4>
-                <a href="/" class="btn btn-success btn-lg px-5 py-3">
+            <div class="mt-5 pt-5 border-top border-secondary text-center">
+                <h4 class="mb-3 text-white">Ready to see your exact 2026 numbers?</h4>
+                <a href="/" class="btn btn-success btn-lg px-5 py-3 fw-bold">
                     Try Our Free State Tax Calculators →
                 </a>
             </div>
         </div>
 
-        <!-- Sidebar -->
         <div class="col-lg-4">
             <div class="sidebar">
-                <!-- Table of Contents -->
-                <div class="card p-4 mb-4">
-                    <h6 class="fw-bold mb-3">Table of Contents</h6>
-                    <div class="toc small">
-                        <a href="#" class="d-block py-1">Key Federal Updates</a>
-                        <a href="#" class="d-block py-1">State-Specific Impacts</a>
-                        <a href="#" class="d-block py-1">What This Means for You</a>
+                <div class="card p-4 mb-4 bg-dark border-secondary">
+                    <h6 class="fw-bold mb-3 text-white">Table of Contents</h6>
+                    <div class="small">
+                        <a href="#" class="d-block py-1 text-muted text-decoration-none">Key Federal Updates</a>
+                        <a href="#" class="d-block py-1 text-muted text-decoration-none">State-Specific Impacts</a>
+                        <a href="#" class="d-block py-1 text-muted text-decoration-none">What This Means for You</a>
                     </div>
                 </div>
 
-                <!-- Related Posts -->
-                <div class="card p-4 mb-4">
-                    <h6 class="fw-bold mb-3">Related Posts</h6>
-                    {% for related in blogs[:3] if related.slug != post.slug %}
+                <div class="card p-4 mb-4 bg-dark border-secondary">
+                    <h6 class="fw-bold mb-3 text-white">Related Posts</h6>
+                    {% for related in blogs[:4] if related.slug != post.slug %}
                     <div class="related-card p-3 mb-3">
-                        <a href="/blog/{{ related.slug }}" class="text-decoration-none text-light">
-                            <strong>{{ related.title }}</strong>
+                        <a href="/blog/{{ related.slug }}" class="text-decoration-none text-light small fw-bold">
+                            {{ related.title }}
                         </a>
                     </div>
                     {% endfor %}
                 </div>
 
-                <!-- Action Buttons -->
                 <div class="d-grid gap-3">
-                    <button onclick="window.print()" class="btn btn-success py-3">
+                    <button onclick="window.print()" class="btn btn-success py-3 fw-bold">
                         <i class="fas fa-download me-2"></i> Download PDF Report
                     </button>
                     <button onclick="shareArticle()" class="btn btn-outline-light py-3">
@@ -122,7 +127,7 @@ function shareArticle() {
         });
     } else {
         navigator.clipboard.writeText(window.location.href);
-        alert("Link copied to clipboard!");
+        alert("✅ Link copied to clipboard!");
     }
 }
 </script>
