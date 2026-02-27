@@ -113,6 +113,11 @@
                     <i class="fas fa-chart-pie fa-5x text-muted mb-4"></i>
                     <h4>Enter your income to see your 2026 take-home pay in {{ state.name }}</h4>
                 </div>
+                <div class="mt-3">
+                    <button onclick="addToCompare('{{ state.slug }}')" class="btn btn-outline-secondary w-100">
+                        Add {{ state.name }} to Compare
+                    </button>
+                </div>
             </div>
         </div>
 

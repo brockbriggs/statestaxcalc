@@ -144,6 +144,15 @@ def blog_post(slug):
                            nice_date=nice_date,
                            blogs=blogs)
 
+@app.route('/compare')
+def compare():
+    # Get slugs from the URL query params: /compare?states=texas,california,new-york
+    slugs = request.args.get('states', '').split(',')
+    # Find matching states in your data
+    selected_states = [s for s in STATES if s['slug'] in slugs]
+    
+    return render_template('compare.html', selected_states=selected_states)
+
 @app.route('/sitemap.xml')
 def sitemap():
     # Use your actual production domain for SEO
