@@ -153,6 +153,11 @@ def compare():
     
     return render_template('compare.html', selected_states=selected_states)
 
+@app.route('/compare/<state1>-vs-<state2>')
+def compare_specific(state1, state2):
+    # Logic to fetch both states and redirect/render the compare page
+    return render_template('compare.html', selected_states=[s for s in STATES if s['slug'] in [state1, state2]])
+
 @app.route('/sitemap.xml')
 def sitemap():
     # Use your actual production domain for SEO
@@ -168,6 +173,9 @@ def sitemap():
     
     # 3. Add Blog Index
     xml += f'  <url><loc>{domain}/blog</loc><priority>0.9</priority></url>\n'
+
+    # Add this inside the sitemap() route in app.py
+    xml += f'  <url><loc>{domain}/compare</loc><priority>0.9</priority></url>\n'
     
     # 4. Add State Calculator Pages
     for s in STATES:

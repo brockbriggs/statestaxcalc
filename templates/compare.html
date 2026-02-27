@@ -1,5 +1,13 @@
 {% extends "base.html" %}
-{% block title %}Compare 2026 State Taxes{% endblock %}
+
+{% block title %}2026 State Tax Comparison Tool | Compare Take-Home Pay{% endblock %}
+
+{% block head_extra %}
+<meta name="description" content="Compare 2026 state income tax, federal tax, and total take-home pay between states side-by-side. See which state saves you more money.">
+<meta property="og:title" content="2026 State Tax Comparison Tool">
+<meta property="og:description" content="Instantly compare tax burdens across 50 states to find your best financial move for 2026.">
+<meta property="og:type" content="website">
+{% endblock %}
 
 {% block content %}
 <div class="container py-5">
@@ -13,9 +21,9 @@
             </div>
             <div class="form-check form-switch mb-3">
                 <input class="form-check-input" type="checkbox" id="compare1099">
-                <label class="form-check-label text-light">Self-Employed (1099)</label>
+                <label class="form-check-label text-light">Self-Employed (1099 Mode)</label>
             </div>
-            <button onclick="runComparison()" class="btn btn-success w-100 fw-bold">Calculate & Compare</button>
+            <button onclick="runComparison()" class="btn btn-success w-100 fw-bold py-3">Calculate & Compare</button>
         </div>
     </div>
 
@@ -29,14 +37,14 @@
         <table class="table table-dark table-hover align-middle">
             <thead>
                 <tr id="headerRow">
-                    <th>Feature</th>
+                    <th class="text-muted">Feature</th>
                     {% for state in selected_states %}
                     <th class="text-success text-center" data-slug="{{ state.slug }}">{{ state.name }}</th>
                     {% endfor %}
                 </tr>
             </thead>
             <tbody id="comparisonBody">
-                <tr id="row-federal"><td>Fed/SE Tax</td></tr>
+                <tr id="row-federal"><td>Federal Tax</td></tr>
                 <tr id="row-state"><td>State Tax</td></tr>
                 <tr id="row-total"><td>Total Tax</td></tr>
                 <tr id="row-takehome"><td><strong>Take-Home Pay</strong></td></tr>
@@ -52,12 +60,13 @@
 
 <script>
 let myChart;
+
 async function runComparison() {
     const income = document.getElementById('compareIncome').value;
     const is1099 = document.getElementById('compare1099').checked;
     const headers = document.querySelectorAll('#headerRow th[data-slug]');
     
-    // Clear previous rows
+    // Clear previous rows (except headers)
     document.querySelectorAll('[id^="row-"] td:not(:first-child)').forEach(el => el.remove());
 
     let labels = [];
@@ -82,6 +91,7 @@ async function runComparison() {
             document.getElementById('row-total').insertAdjacentHTML('beforeend', `<td class="text-center">$${data.total_tax.toLocaleString()}</td>`);
             document.getElementById('row-takehome').insertAdjacentHTML('beforeend', `<td class="text-center text-success fw-bold">$${data.take_home.toLocaleString()}</td>`);
             
+            // Push to arrays for the chart
             labels.push(header.innerText);
             fedData.push(data.federal_tax);
             stateData.push(data.state_tax);
@@ -91,7 +101,8 @@ async function runComparison() {
         }
     }
 
-    // Chart logic - Stacked Bar (Order: Take-Home (bottom), State, Fed (top))
+    // Chart logic - Stacked Bar
+    // Order: Take-Home (Green/Bottom), State (Red/Middle), Fed (Yellow/Top)
     const ctx = document.getElementById('compareChart').getContext('2d');
     if (myChart) myChart.destroy();
     
@@ -101,8 +112,8 @@ async function runComparison() {
             labels: labels,
             datasets: [
                 { label: 'Take-Home Pay', data: takeHomeData, backgroundColor: '#10b981' }, // Green
-                { label: 'State Tax', data: stateData, backgroundColor: '#ef4444' },       // Amber
-                { label: 'Federal Tax', data: fedData, backgroundColor: '#eab308' }        // Blue
+                { label: 'State Tax', data: stateData, backgroundColor: '#ef4444' },       // Reddish
+                { label: 'Federal Tax', data: fedData, backgroundColor: '#eab308' }        // Yellowish
             ]
         },
         options: {
@@ -117,10 +128,9 @@ async function runComparison() {
                     mode: 'index', 
                     intersect: false,
                     callbacks: {
-                        // This ensures the tooltip adds up the total correctly
                         footer: (items) => {
                             let total = items.reduce((sum, i) => sum + i.parsed.y, 0);
-                            return 'Total Income: $' + total.toLocaleString();
+                            return 'Total Gross Income: $' + total.toLocaleString();
                         }
                     }
                 } 
@@ -129,5 +139,9 @@ async function runComparison() {
     });
 }
 
+function clearComparison() {
+    localStorage.removeItem('compareStates');
+    window.location.href = '/all-calculators';
+}
 </script>
 {% endblock %}
